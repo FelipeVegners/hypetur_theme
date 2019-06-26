@@ -1,0 +1,43 @@
+
+/*
+Theme Name: Hype Tur 2018
+Author: Felipe Vegners (@vermito)
+Author URI: http://www.vegners.com
+Version: 1.0
+*/
+
+
+//misc settings
+@import 'config/_settings';
+@import 'config/_mixins';
+
+//frameworks
+@import 'config/bootstrap/bootstrap';
+
+
+
+//global things
+// @import 'general/_reset';
+@import 'general/_typography';
+@import 'general/_colors';
+@import 'general/_ui-elements';
+
+// Owl Carousel
+@import 'owl-carousel/owl.carousel';
+
+// Slick Carousel
+@import 'slick/slick';
+@import 'slick/slick-theme';
+
+//Layouts
+@import 'layout/_main';
+@import 'layout/_nav';
+@import 'layout/tabs';
+@import 'layout/_destination-detail';
+@import 'layout/_destination-about';
+@import 'layout/_services';
+@import 'layout/_about-us';
+@import 'layout/_testmonials';
+@import 'layout/_blog-section';
+@import 'layout/contact-section';
+@import 'layout/footer';

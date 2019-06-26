@@ -1,0 +1,97 @@
+// Hype Tur Theme Typography
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,300i,500i,700,700i');
+
+// Font Family
+$title-font: 'Roboto Slab', serif;
+$normal-font: 'Roboto', sans-serif;
+
+// Font Weigth
+$title-regular: 400;
+$title-bold: 700;
+$normal-regular: 300;
+$normal-medium: 500;
+$normal-bold: 700;
+
+// Mixins for italic font
+@mixin normal-regular-i {
+  font-style: italic;
+  font-weight: $normal-regular;
+}
+@mixin normal-bold-i {
+  font-style: italic;
+  font-weight: $normal-bold;
+}
+
+// Mixin for Menu Item
+@mixin menu-item {
+  font-family: $title-font;
+  font-weight: $title-regular;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+// Mixin for headings
+@mixin heading-1 {
+  font-family: $title-font;
+  font-weight: $title-bold;
+  font-size: 1rem * 2;
+  line-height: 1.5;
+}
+
+@mixin heading-2 {
+  @include heading-1;
+  font-size: 1.375rem;
+}
+
+@mixin heading-3 {
+  @include heading-2;
+  font-size: 1rem;
+}
+
+// Mixin for Paragraphs
+@mixin paragraph {
+  font-family: $normal-font;
+  font-weight: $normal-regular;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@mixin paragraph-strong {
+  @include paragraph;
+  font-weight: $normal-bold;
+}
+
+@mixin paragraph-i {
+  @include paragraph;
+  @include normal-regular-i;
+}
+
+// Mixin for Small text
+@mixin small-text-i {
+  @include paragraph-i;
+  font-size: 0.75rem;
+}
+
+// Mixin for Button Text
+@mixin button-text {
+  font-family: $normal-font;
+  font-weight: $normal-medium;
+  font-style: italic;
+
+}
+// Mixin for Section Titles
+@mixin heading-title-section {
+  @include heading-1;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 4rem;
+    height: 3px;
+    background-color: $second-color;
+
+  }
+}
+

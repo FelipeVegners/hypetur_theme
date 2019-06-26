@@ -1,0 +1,9 @@
+node_modules
+.DS_STORE
+*.php
+readme.html
+license.txt
+wp-admin
+wp-includes
+!bkp
+!/wp-content/**/*.php

@@ -1,0 +1,30 @@
+//Styles for UI Elements - Buttons, Forms, Inputs, etc
+
+@mixin button-std {
+    @include button-text;
+    color: $white;
+    text-transform: uppercase;
+    width: 255px;
+    height: 48px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+// Icons
+@mixin icon-wrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: $main-color;
+    border: 4px solid $second-color;
+}
+
+// Admin Posts Menu Icon
+
+#menu-posts .wp-menu-image.dashicons-before.dashicons-admin-post:before {
+    content: '\f130';
+}
+
+.dashicons { color: red; }

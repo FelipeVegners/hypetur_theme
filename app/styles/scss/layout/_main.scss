@@ -1,0 +1,41 @@
+*:focus {
+  outline: none !important;
+}
+
+body {
+  background: #fff;
+  color: $main-color;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+p {
+  @include paragraph;
+  letter-spacing: 0.4pt;
+}
+
+strong {
+  @include paragraph-strong;
+}
+
+em {
+  @include paragraph-i;
+}
+
+.section-title {
+  @include heading-title-section;
+}
+
+.border-red {
+  border: 1px solid red;
+}

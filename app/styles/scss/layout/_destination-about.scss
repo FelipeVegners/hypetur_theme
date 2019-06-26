@@ -1,0 +1,85 @@
+// Styles for Destination About Section
+
+.destination-about {
+    display: none;
+    // height: auto;
+    padding: 12rem 0 2rem 0;
+    background: $second-light-color url('images/world-map.png') center center /contain no-repeat;
+}
+
+.destination-price {
+    margin: 2rem 0;
+}
+
+.package-icon {
+    &:after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        right: -13px;
+        font-size: 3rem;
+        color: $main-color;
+    }
+    &:last-of-type:after {
+        display: none;
+    }
+}
+
+.icon-wrapper {
+    @include icon-wrapper;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    & .icon {
+        position: relative;
+        top: -3px;
+        left: 13px;
+        width: 32px;
+        height: 32px;
+    }
+
+    & img.icon.-terrestre {
+        position: relative;
+        top: -1px;
+        width: 40px;
+        height: auto;
+    }
+}
+
+.icon-label {
+    @include paragraph-strong;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.package-price {
+    padding-left: 2rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: 0;
+        border-left: 2px solid $main-color;
+    }
+}
+
+button.buy-package {
+    @include button-std;
+    background: $main-color;
+    margin: 2rem 0 0;
+
+    &:hover {
+        background-color: darken($main-color, 10%);
+        letter-spacing: 0.2pt;
+    }
+
+    &:active {
+        background-color: $main-color;
+    }
+}

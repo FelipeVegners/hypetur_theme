@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>instagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hype-Tur---XL" transform="translate(-1106.000000, -35.000000)" fill="#5B4E5C" fill-rule="nonzero">
+            <g id="Nav-Bar" transform="translate(656.000000, 35.000000)">
+                <g id="instagram" transform="translate(450.000000, 0.000000)">
+                    <circle id="Oval" cx="12" cy="12" r="1.8"></circle>
+                    <path d="M15,7.29 L9,7.29 C8.04,7.29 7.26,8.07 7.26,9.03 L7.26,15 C7.26,15.96 8.04,16.74 9,16.74 L15,16.74 C15.96,16.74 16.74,15.96 16.74,15 L16.74,9 C16.71,8.04 15.96,7.29 15,7.29 Z M12,15.12 C10.29,15.12 8.88,13.71 8.88,12 C8.88,10.29 10.29,8.88 12,8.88 C13.71,8.88 15.12,10.29 15.12,12 C15.12,13.71 13.71,15.12 12,15.12 Z M15.21,9.54 C14.79,9.54 14.46,9.21 14.46,8.79 C14.46,8.37 14.79,8.04 15.21,8.04 C15.63,8.04 15.96,8.37 15.96,8.79 C15.96,9.21 15.63,9.54 15.21,9.54 Z" id="Shape"></path>
+                    <path d="M12,0 C5.37,0 0,5.37 0,12 C0,18.63 5.37,24 12,24 C18.63,24 24,18.63 24,12 C24,5.37 18.63,0 12,0 Z M18.09,15.03 C18.09,16.71 16.71,18.09 15.03,18.09 L8.97,18.09 C7.29,18.09 5.91,16.71 5.91,15.03 L5.91,8.97 C5.91,7.29 7.29,5.91 8.97,5.91 L15,5.91 C16.68,5.91 18.06,7.29 18.06,8.97 L18.09,15.03 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,73 @@
+<!-- BOOTSTRAP TABS -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">HOME</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">PROFILE</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">CONTACT</div>
+</div>
+<!-- PURE CSS TABS -->
+<div class="pc-tab">
+    <input id="tab-<?= $i ?>" type="radio" name="pct" checked />
+    <input id="tab-<?= $i ?>" type="radio" name="pct" />
+    <input id="tab-<?= $i ?>" type="radio" name="pct" />
+    <nav>
+      <ul>
+        <li class="tab1">
+          <label for="tab1">First Tab</label>
+        </li>
+        <li class="tab2">
+          <label for="tab2">Second Tab</label>
+        </li>
+        <li class="tab3">
+          <label for="tab3">Third Tab</label>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <div class="tab1">
+        <h2>First</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quidem minus nostrum, voluptatem accusamus aspernatur quia harum ratione, officia laudantium inventore autem doloribus atque labore numquam non. Hic, animi.</p>
+      </div>
+      <div class="tab2">
+        <h2>Second</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore error repellendus officiis aliquid a, vitae reprehenderit, accusantium vero, ad. Obcaecati numquam sapiente cupiditate. Praesentium eaque, quae error!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, maiores.</p>
+      </div>
+      <div class="tab3">
+        <h2>Third</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nobis culpa rem, vitae earum aliquid.</p>
+      </div>
+    </section>
+</div>
+
+<!-- JS BUTTON TABS -->
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="w3-container city" style="border:1px solid red">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="w3-container city" style="display:none; border:1px solid red">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="w3-container city" style="display:none; border:1px solid red">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>

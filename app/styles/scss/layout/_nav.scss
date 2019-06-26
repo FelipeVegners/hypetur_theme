@@ -1,0 +1,43 @@
+.-logo {
+    width: 165px;
+    height: 34px;
+    background: url('images/brand/horizontal-brand.svg') center center/contain no-repeat;
+    font-size: 10px;
+    text-indent: -9999px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+    //background: #fff;
+
+    & ul li a.nav-link {
+        @include menu-item;
+        color: $main-color;
+        margin: 0 1rem;
+        @media screen and (max-width:768px) {
+            margin: 0;
+        }
+        line-height: 2;
+        transition: all .15s ease-in;
+        &:hover {
+            padding-bottom: 4px;
+            border-bottom: 2px solid $second-color;
+        }
+    }
+}
+
+.fixed-top {
+    z-index: 99999;
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+}
+
+.menu-active {
+    padding: 0 !important;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $second-color;
+}

@@ -1,0 +1,53 @@
+.contact-section {
+  padding: 5rem 0 2rem 0;
+  background: $main-color;
+  font-weight: 300;
+  color: $white;
+
+  h1, p {
+    color: $white;
+  }
+
+  label {
+    margin: 0;
+  }
+
+  a {
+    display: inherit;
+    margin: 1rem 0;
+    @include button-std;
+    background: $second-color;
+    color: $main-color;
+    line-height: 2.2;
+    &:hover {
+        background-color: darken($second-color, 10%);
+        letter-spacing: 0.2pt;
+    }
+  }
+
+  .debit-form {
+    background: $main-color;
+    border: 2px solid $second-color;
+    color: $second-color;
+    &:hover {
+      background: $main-color;
+      letter-spacing: 0.2pt;
+  }
+  }
+
+  small {
+    opacity: 0.5 !important;
+    line-height: 1 !important;
+    font-style: italic;
+  }
+
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+    font-size: 0.85rem !important;
+    color: $second-color !important;
+    }
+  }
+}

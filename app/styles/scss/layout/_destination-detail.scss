@@ -1,0 +1,97 @@
+//Styles for Destination Package Section
+.destination-section {
+    height: calc(100vh - 60px);
+    position: relative;
+}
+
+.destination-detail {
+    background: rgba($main-color, .95);
+    position: relative;
+    width: 380px;
+    height: calc(100vh + 40px);
+    top: 5vh;
+    padding: 2rem 2rem;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
+    box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 2rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 24px 12px 0 12px;
+        border-color: rgba($main-color, .9) transparent transparent transparent;
+    }
+
+    & > h1 {
+        @include heading-1;
+        color: $second-color;
+        letter-spacing: 1pt;
+        margin: 0;
+        padding: 24px 0 0;
+        &:before {
+            content: '';
+            width: 40px;
+            border-bottom: 2px solid $second-color;
+            position: absolute;
+            top: 32px;
+            z-index: 9999;
+        }
+    }
+
+    & > small {
+        @include normal-regular-i;
+        color: rgba($white, .70);
+        font-size: 1rem;
+        margin: 8px 0 32px 0;
+        display: block;
+    }
+
+    .dest-period {
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 700;
+        color: #fec578;
+    }
+
+    & > p {
+        @include paragraph; 
+        color: $white;
+        line-height: 1.8;
+    }
+
+    & > button {
+        @include button-std;
+        margin: 2rem 0;
+        background: $second-color;
+        color: $main-color;
+        &:hover {
+            background-color: darken($second-color, 10%);
+            letter-spacing: 0.2pt;
+        }
+    }
+    & > button:active {
+        background-color: $second-color;
+    }
+}
+
+.hero-image {
+    background: url('images/hero-destination.jpg') center center /cover no-repeat;
+    -webkit-box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
+    -moz-box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
+    box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
+    height: calc(40vw - 60px);;
+    align-self: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .hero-image {
+        height: calc(50vw - 60px);;
+        align-self: center;
+    }
+}

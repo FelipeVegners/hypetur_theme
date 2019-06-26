@@ -1,0 +1,22 @@
+// Styles for Services Section
+
+.services {
+    padding: 5rem 0 2rem 0;
+}
+
+.services-wrapper {
+    margin-top: 1rem;
+    background: $white;
+    padding: 2rem;
+
+    & > div > img {
+        margin-bottom: 1rem;
+    }
+}
+
+.service-icon-wrapper {
+    padding: 1.5rem 0;
+    & p {
+        margin: 0;
+    }
+}

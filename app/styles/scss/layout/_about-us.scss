@@ -1,0 +1,38 @@
+// Styles for About Us Section
+.about-us {
+    padding: 5rem 0 2rem 0;
+}
+
+.about-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.about-us-avatar {
+    & img {
+        margin-bottom: 1rem;
+    }
+
+    & small a {
+        display: block;
+        color: $main-color;
+        padding: 3px 5px;
+        transition: all .15s ease-in;
+        &:hover {
+            text-decoration: none;
+            background: $second-color;
+        }
+    }
+}
+
+.about-us-text {
+    & h1 {
+        margin: 0;
+    }
+    & small {
+        display: block;
+        @include small-text-i;
+        color: rgba($black, 0.6);
+        margin: .5rem 0;
+    }
+}
