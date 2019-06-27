@@ -7,3 +7,7 @@ wp-admin
 wp-includes
 !bkp
 !/wp-content/**/*.php
+wp-content/themes/twentynineteen
+wp-content/themes/twentyseventeen
+wp-content/themes/twentysixteen
+.htaccess
