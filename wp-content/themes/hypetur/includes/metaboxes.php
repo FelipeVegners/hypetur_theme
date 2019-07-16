@@ -71,8 +71,11 @@
             array(
               'id' => 'picture_path',
               'name' => __('Arquivo da Imagem do destino:', 'hype-tur'),
-              'type' => 'image',
+              'type' => 'image_advanced',
               'force_delete' => false,
+              'max_file_uploads' => 1,
+              'max_status' => false,
+              'image_size' => 'thumbnail',
             ),
             array(
               'id' => 'package_title',

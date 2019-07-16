@@ -480,6 +480,17 @@
     <div class="row">
       <h3>Uma agência parceira:</h3>
       <div class="col-md-12">
+        <?php
+          // query for the page
+          $page_query = new WP_Query( 'pagename=logo-parceiros' );
+          // "loop" through query (even though it's just one page) 
+          while ( $page_query->have_posts() ) : $page_query->the_post();
+              the_content();
+          endwhile;
+          // reset post data (important!)
+          wp_reset_postdata();
+        ?>
+
         <ul class="partners__list d-flex">
           <li class="parters__logos mr-4">
             <img src="#" alt="Logo">
