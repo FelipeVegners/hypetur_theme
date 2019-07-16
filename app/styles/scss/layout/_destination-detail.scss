@@ -12,9 +12,9 @@
     top: 5vh;
     padding: 2rem 2rem;
     z-index: 9999;
-    -webkit-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
-    -moz-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
-    box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 0px 2px 30px -2px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 2px 30px -2px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 2px 30px -2px rgba(0, 0, 0, 0.28);
 
     &:after {
         content: '';
@@ -28,12 +28,13 @@
         border-color: rgba($main-color, .9) transparent transparent transparent;
     }
 
-    & > h1 {
+    &>h1 {
         @include heading-1;
         color: $second-color;
         letter-spacing: 1pt;
         margin: 0;
         padding: 24px 0 0;
+
         &:before {
             content: '';
             width: 40px;
@@ -44,7 +45,7 @@
         }
     }
 
-    & > small {
+    &>small {
         @include normal-regular-i;
         color: rgba($white, .70);
         font-size: 1rem;
@@ -59,39 +60,43 @@
         color: #fec578;
     }
 
-    & > p {
-        @include paragraph; 
+    &>p {
+        @include paragraph;
         color: $white;
         line-height: 1.8;
     }
 
-    & > button {
+    &>.more-info-btn {
         @include button-std;
-        margin: 2rem 0;
+        margin: 2rem 0 4rem 0;
         background: $second-color;
         color: $main-color;
+
         &:hover {
             background-color: darken($second-color, 10%);
             letter-spacing: 0.2pt;
         }
     }
-    & > button:active {
+
+    &>.more-info-btn:active {
         background-color: $second-color;
     }
 }
 
 .hero-image {
     background: url('images/hero-destination.jpg') center center /cover no-repeat;
-    -webkit-box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
-    -moz-box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
-    box-shadow: 0px 4px 30px -3px rgba(0,0,0,.28);
-    height: calc(40vw - 60px);;
+    -webkit-box-shadow: 0px 4px 30px -3px rgba(0, 0, 0, .28);
+    -moz-box-shadow: 0px 4px 30px -3px rgba(0, 0, 0, .28);
+    box-shadow: 0px 4px 30px -3px rgba(0, 0, 0, .28);
+    height: calc(40vw - 60px);
+    ;
     align-self: center;
 }
 
 @media screen and (max-width: 1280px) {
     .hero-image {
-        height: calc(50vw - 60px);;
+        height: calc(50vw - 60px);
+        ;
         align-self: center;
     }
 }

@@ -24,7 +24,7 @@
             <p class="dest-period"><?php echo $package_meta['period'][0] ?></p>
             <p class="mb-0"><?php echo $package_meta['intro'][0] ?></p>
             <p><?php echo $package_meta['testmonial'][0] ?></p>
-            <button class="more-info-btn my-4">Quero saber mais!</button>
+            <button class="more-info-btn">Quero saber mais!</button>
           </div>
         </div>
       </div>
@@ -346,8 +346,16 @@
     <h1 class="section-title">Blog Hype Tur</h1>
     <div class="row">
       <div class="col-md-12">
-        <p>Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray
-          paleo tattooed, Truffaut skateboard street art PBR jean shorts.</p>
+        <?php
+          // query for the page
+          $page_query = new WP_Query( 'pagename=blog-intro' );
+          // "loop" through query (even though it's just one page) 
+          while ( $page_query->have_posts() ) : $page_query->the_post();
+              the_content();
+          endwhile;
+          // reset post data (important!)
+          wp_reset_postdata();
+        ?>
       </div>
       <div class="col-md-7 last-post-column">
         <h5><em>Último Post</em></h5>
@@ -400,9 +408,18 @@
       <h1 class="section-title">Fale conosco</h1>
     <div class="row">
       <div class="col-md-6">
-        <p>Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa.</p>
-        <form>
-          <div class="form-group">
+        <?php
+          // query for the page
+          $page_query = new WP_Query( 'pagename=fale-conosco' );
+          // "loop" through query (even though it's just one page) 
+          while ( $page_query->have_posts() ) : $page_query->the_post();
+              the_content();
+          endwhile;
+          // reset post data (important!)
+          wp_reset_postdata();
+        ?>
+        <form action="#">
+          <div class="form-group my-4">
             <input type="text" class="form-control" placeholder="Seu nome">
           </div>
           <div class="form-group">
@@ -446,7 +463,7 @@
         <div class="row">
           <div class="col-md-12">
             <p class="my-4">
-              Av. Nove de Julho, 2575 - Sala 210 - Ed. Maxime
+              Av. Nove de Julho, 2575 - Sala 1711 - Ed. Maxime
               <br>Anhangabaú - Jundiaí / SP
               <br>CEP 13208-056
             </p>
@@ -459,6 +476,25 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <h3>Uma agência parceira:</h3>
+      <div class="col-md-12">
+        <ul class="partners__list d-flex">
+          <li class="parters__logos mr-4">
+            <img src="#" alt="Logo">
+          </li>
+          <li>
+            <img src="#" alt="Logo">
+          </li>
+          <li>
+            <img src="#" alt="Logo">
+          </li>
+          <li>
+            <img src="#" alt="Logo">
+          </li>
+        </ul>
+      </div>      
     </div>
   </div>
 </section>
