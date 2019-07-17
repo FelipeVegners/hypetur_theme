@@ -65,8 +65,8 @@
                 <p class="mb-0">Saldo em:</p>
                 <h2><?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h2>
                 <small><?php echo $package_meta['package_price_disclaimer'][0] ?></small>
-                <button class="buy-package" data-toggle="modal" data-target="#exampleModal">Quero reservar este pacote</button>
-                <!-- Modal -->
+                <button class="buy-package" data-toggle="modal" data-target="#exampleModal">Fazer reserva</button>
+                <!-- Modal
                 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -85,7 +85,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -487,7 +487,7 @@
         ?>
 
         <ul class="partners__list d-flex">
-          <li class="parters__logos mr-4">
+          <li class="partners__logos mr-4">
             <img src="#" alt="Logo">
           </li>
           <li>
@@ -504,5 +504,4 @@
     </div>
   </div>
 </section>
-
 <?php get_footer(); ?>

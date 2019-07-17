@@ -1,14 +1,14 @@
 <?php
-    // Get the metabox post types
-    require_once('includes/metaboxes.php');
-    require_once('includes/posts-config.php');
+  // Get the metabox post types
+  require_once('includes/metaboxes.php');
+  require_once('includes/posts-config.php');
 
-    // Get the navwalker bootstrap menu integration
-    require get_template_directory() . '/bootstrap-navwalker.php';
+  // Get the navwalker bootstrap menu integration
+  require get_template_directory() . '/bootstrap-navwalker.php';
 
-    register_nav_menus( array(
-        'menu-1' => esc_html__( 'Primary', 'theme-hypetur' ),
-    ) );
+  register_nav_menus( array(
+      'menu-1' => esc_html__( 'Primary', 'theme-hypetur' ),
+  ) );
 
   function theme_resources() {
     wp_enqueue_style('style', get_stylesheet_uri());
@@ -19,6 +19,7 @@
   }
   add_action('wp_enqueue_scripts', 'theme_resources');
 
+  // Add default field to insert the post featured image
   add_theme_support( 'post-thumbnails', apply_filters( 'pagelines_post-thumbnails', array('post') ) );
 
 ?>

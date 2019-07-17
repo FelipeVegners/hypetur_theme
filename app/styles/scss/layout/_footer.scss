@@ -2,8 +2,32 @@ footer {
   padding: 4rem 0 2rem;
   background: $main-color;
   color: $white;
+
   p {
     font-size: 0.85rem;
     margin-bottom: 0 !important;
+  }
+}
+
+.back-to-top {
+  @include button-std;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 48px;
+  background: $second-color;
+
+  &>i {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: $main-color;
+  }
+
+  &:hover {
+    background-color: darken($second-color, 10%);
   }
 }

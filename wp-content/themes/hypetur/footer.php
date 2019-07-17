@@ -7,6 +7,9 @@
     </div>
   </div>
 </footer>
+<div class="back-to-top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
 <?php wp_footer(); ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
