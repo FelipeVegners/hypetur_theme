@@ -19,4 +19,6 @@
   }
   add_action('wp_enqueue_scripts', 'theme_resources');
 
+  add_theme_support( 'post-thumbnails', apply_filters( 'pagelines_post-thumbnails', array('post') ) );
+
 ?>

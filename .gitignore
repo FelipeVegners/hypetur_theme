@@ -1,13 +1,11 @@
 node_modules
 .DS_STORE
 *.php
+!/wp-content/themes/**/*.php
 readme.html
 license.txt
 wp-admin
 wp-includes
 !bkp
-!/wp-content/**/*.php
-wp-content/themes/twentynineteen
-wp-content/themes/twentyseventeen
-wp-content/themes/twentysixteen
+wp-content/plugins/**/**
 .htaccess

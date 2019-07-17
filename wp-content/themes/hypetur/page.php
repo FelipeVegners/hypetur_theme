@@ -16,8 +16,6 @@
   ?>
   <div class="promo-package-wrapper">
     <section class="destination-section" style="background:url(<?php echo $package_meta['picture_url'][0] ?>) top center/cover no-repeat;">
-      <div class="container">
-        <div class="row">
           <div class="destination-detail">
             <h1><?php echo $package_meta['place'][0] ?></h1>
             <small><?php echo $package_meta['country'][0] ?></small>
@@ -25,9 +23,7 @@
             <p class="mb-0"><?php echo $package_meta['intro'][0] ?></p>
             <p><?php echo $package_meta['testmonial'][0] ?></p>
             <button class="more-info-btn">Quero saber mais!</button>
-          </div>
-        </div>
-      </div>
+          </div>      
     </section>
     <section class="destination-about">
       <div class="container">
@@ -343,9 +339,9 @@
 <!-- BLOG SECTION -->
 <section class="blog-section">
   <div class="container">
-    <h1 class="section-title">Blog Hype Tur</h1>
+    <h1 class="section-title pb-3">Blog Hype Tur</h1>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 pb-5">
         <?php
           // query for the page
           $page_query = new WP_Query( 'pagename=blog-intro' );
@@ -381,7 +377,6 @@
       <div class="col-md-5 most-liked-tags">
         <h5>Os termos mais buscados em nosso blog</h5>
         <hr>
-        <p>Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party.</p>
         <div class="row">
           <div class="col-md-12">
             <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>

@@ -1,0 +1,42 @@
+// Styles for loop of all blogposts
+
+.blog {
+  background: $white;
+
+  &__topbar {
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    margin-bottom: 60px;
+    height: 60px;
+    background: $main-color;
+    border-bottom: 4px solid $main-dark-color;
+    z-index: 9999;
+  }
+
+  &__list {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $main-color;
+
+    &__image {
+      width: 320px;
+      height: 180px;
+      margin-right: 20px;
+      overflow: hidden;
+
+      & > img.wp-post-image {
+        margin-bottom: 0 !important;
+        object-fit: cover;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      width: 100%;
+    }
+  }
+}

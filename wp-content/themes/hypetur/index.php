@@ -14,35 +14,53 @@
 
 		<?php wp_head(); ?>
 		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
+      // conditionizr.com
+      // configure environment tests
+      conditionizr.config({
+          assets: '<?php echo get_template_directory_uri(); ?>',
+          tests: {}
+      });
+    </script>
 
 	</head>
 
   <body <?php body_class(); ?>>
 
-    <a href="../">Voltar para o site</a>
-    <section class="blog-section">
+    <section class="blog">
+      <div class="container-fluid blog__topbar">
+        <a href="../" class="back-home">Voltar para o site</a>
+      </div>
       <div class="container">
-        <h1 class="section-title">Blog Hype Tur</h1>
         <div class="row">
-          <div class="col-md-12">
-            <p>Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray
-              paleo tattooed, Truffaut skateboard street art PBR jean shorts.</p>
+          <div class="col-md-9 offset-md-1">
+            <h1 class="section-title">Blog Hype Tur</h1>
+            <?php
+              // query for the page
+              $page_query = new WP_Query( 'pagename=blog-intro' );
+              // "loop" through query (even though it's just one page) 
+              while ( $page_query->have_posts() ) : $page_query->the_post();
+                  the_content();
+              endwhile;
+              // reset post data (important!)
+              wp_reset_postdata();
+            ?>          
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-9 offset-md-1">
+            <h2 class="my-3"><?php _e( 'Posts recentes', 'hypetur' ); ?></h2>
           </div>
         </div>
         <div class="row">
-          <h2><?php _e( 'Posts recentes', 'hypetur' ); ?></h2>
-
-          <?php get_template_part('loop'); ?>
-
-          <?php get_template_part('pagination'); ?>
+          <div class="col-md-9 offset-md-1">
+            <?php get_template_part('loop'); ?>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+            <?php get_template_part('pagination'); ?>
+          </div>
+        </div>        
       </div>
     </section>
 

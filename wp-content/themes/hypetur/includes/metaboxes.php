@@ -58,15 +58,15 @@
                 'type' => 'text',
             ),
             array(
-                'id'   => 'intro',
-                'name' => __('Breve introdução do destino:', 'hype-tur'),
-                'type' => 'wysiwyg',
+                'id'    => 'intro',
+                'name'  => __('Breve introdução do destino:', 'hype-tur'),
+                'type'  => 'wysiwyg',
                 'limit' => 256,
             ),
             array(
-              'id' => 'picture_url',
-              'name' => __('URL da Imagem do destino:', 'hype-tur'),
-              'type' => 'text'
+              'id'    => 'picture_url',
+              'name'  => __('URL da Imagem do destino:', 'hype-tur'),
+              'type'  => 'text'
             ),
             array(
               'id' => 'picture_path',
