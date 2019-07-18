@@ -129,7 +129,7 @@
       <div class="row align-items-center services-wrapper">
         <div class="col-md-3 text-center">
           <img src="<?php echo get_template_directory_uri();?>/images/icons/service-category-1.svg" alt="">
-          <h3>A Hype Tur atende clientes que desejam viajar seja para turismo ou negócios </h3>
+          <h3>A HypeTur atende clientes que desejam viajar a turismo ou negócios </h3>
         </div>
         <div class="col-md-4 offset-md-1">
           <div class="row align-items-center service-icon-wrapper">
@@ -337,7 +337,7 @@
   </div>
 </section>
 <!-- BLOG SECTION -->
-<section class="blog-section">
+<section id="blog" class="blog-section">
   <div class="container">
     <h1 class="section-title pb-3">Blog Hype Tur</h1>
     <div class="row">
@@ -445,22 +445,30 @@
         </form>
       </div>
       <div class="col-md-5 offset-md-1">
-        <img src="<?php bloginfo('template_url');?>/images/jundiai-map.png" alt="" width="100%">
+        <div class="row">
+          <!-- <iframe width="100%" height="360" src="https://maps.google.com/maps?width=100%&amp;height=360&amp;hl=en&amp;q=Av.%20Nove%20de%20Julho%2C%203575%20-%20Anhangaba%C3%BA%20-%20Jundia%C3%AD%2C%20SP+(Hype%20Tur%20Viagens%20e%20Turismo)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          </iframe> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.1087971786023!2d-46.893944585007375!3d-23.20270535433016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf32ab9d105df5%3A0xf0d736a914cd4669!2sHype+Tur!5e0!3m2!1spt-BR!2sbr!4v1563415352504!5m2!1spt-BR!2sbr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         <div class="row mt-4">
-          <div class="col-md-3">
+          <div class="col-md-4">
             <img src="<?php bloginfo('template_url');?>/images/brand/normal-brand.svg" alt="" width="100%">
           </div>
-          <div class="col-md-9 company-info">
-            <p class="mb-0">A.O. PACHECO VIAGENS E TURISMO - ME</p>
-            <p class="mb-0">CNPJ 08.345.543/0001-78</p>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12 company-info">
+            <p class="mb-0">A.O. PACHECO VIAGENS E TURISMO - EPP</p>
+            <p class="mb-0">CNPJ 27.077.404/0001-30</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <p class="my-4">
-              Av. Nove de Julho, 2575 - Sala 1711 - Ed. Maxime
-              <br>Anhangabaú - Jundiaí / SP
-              <br>CEP 13208-056
+              Av. Nove de Julho, 3575 - Sala 1711
+              <br>
+              Anhangabaú - Jundiaí / SP
+              <br>
+              CEP 13208-056
             </p>
           </div>
         </div>
@@ -472,9 +480,15 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="partners__section">
+  <div class="container">
     <div class="row">
-      <h3>Uma agência parceira:</h3>
-      <div class="col-md-12">
+    <div class="col-md-12">
+      <small class="mb-3">Uma agência parceira:</small>
+    </div>
+      <div class="partners__logos col-md-12">
         <?php
           // query for the page
           $page_query = new WP_Query( 'pagename=logo-parceiros' );
@@ -485,23 +499,9 @@
           // reset post data (important!)
           wp_reset_postdata();
         ?>
-
-        <ul class="partners__list d-flex">
-          <li class="partners__logos mr-4">
-            <img src="#" alt="Logo">
-          </li>
-          <li>
-            <img src="#" alt="Logo">
-          </li>
-          <li>
-            <img src="#" alt="Logo">
-          </li>
-          <li>
-            <img src="#" alt="Logo">
-          </li>
-        </ul>
       </div>      
     </div>
   </div>
 </section>
+
 <?php get_footer(); ?>

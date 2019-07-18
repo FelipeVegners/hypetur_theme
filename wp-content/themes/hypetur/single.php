@@ -25,7 +25,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<a href="/blog/">Ver todos os posts</a>
+		<a href="../blog/">Ver todos os posts</a>
 		<div class="container">
 			<section class="row" itemscope itemtype="http://schema.org/BlogPosting">
 				<?php

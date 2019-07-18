@@ -18,33 +18,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header id="top">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../">
-          <h1 class="-logo">
-            <?php bloginfo('name')?>
-          </h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
-          aria-controls="navbar-content" aria-expanded="false"
-          aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <header id="top" class="nav__wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../">
+        <h1 class="-logo">
+          <?php bloginfo('name')?>
+        </h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
+        aria-controls="navbar-content" aria-expanded="false"
+        aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbar-content">
-          <?php
-          wp_nav_menu( array(
-            'theme_location' => 'menu-1',
-            'menu_id'        => 'primary-menu',
-            'container'      => false,
-            'depth'          => 2,
-            'menu_class'     => 'navbar-nav ml-auto',
-            'walker'         => new Bootstrap_NavWalker(),
-            'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
-          ) );
-        ?>
-        </div>
-      </nav>
-    </div>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <?php
+        wp_nav_menu( array(
+          'theme_location' => 'menu-1',
+          'menu_id'        => 'primary-menu',
+          'container'      => false,
+          'depth'          => 2,
+          'menu_class'     => 'navbar-nav ml-auto',
+          'walker'         => new Bootstrap_NavWalker(),
+          'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+        ) );
+      ?>
+      </div>
+    </nav>
   </header>

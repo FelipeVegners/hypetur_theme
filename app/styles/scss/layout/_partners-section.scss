@@ -1,0 +1,24 @@
+// Styles for partners section and logos
+
+.partners {
+  &__section {
+    padding: 2rem 0;
+  }
+
+  &__logos {
+
+    & > ul {
+      display: flex;
+      align-items: center;
+      padding: 2rem 0;
+      list-style: none;
+
+      & > li > img {
+        margin-right: 3rem;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+}
