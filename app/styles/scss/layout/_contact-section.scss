@@ -45,7 +45,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    p {
+
+    & p {
     font-size: 0.85rem !important;
     color: $second-color !important;
     }

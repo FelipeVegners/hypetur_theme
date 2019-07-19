@@ -4,6 +4,23 @@
     display: none;
     padding: 8rem 0 2rem 0;
     background: $second-light-color url('images/world-map.png') center center /contain no-repeat;
+    background-attachment: fixed;
+
+    & p {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & ul {
+        margin-left: 24px;
+    }
+
+    & li {
+        margin-bottom: 1rem;
+    }
 }
 
 .destination-price {
@@ -19,6 +36,7 @@
         font-size: 3rem;
         color: $main-color;
     }
+
     &:last-of-type:after {
         display: none;
     }
@@ -81,4 +99,51 @@ button.buy-package {
     &:active {
         background-color: $main-color;
     }
+}
+
+.package-more-info {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+
+    & .more-info-tab {
+        display: block;
+        border-radius: 3px 3px 0 0;
+        padding: 1rem 1rem;
+        margin-right: 0.5rem;
+        width: 170px;
+        text-align: center;
+        color: $main-color;
+        transition: all 0.25s ease-in;
+
+        &:hover {
+            text-decoration: none;
+            background: darken($second-light-color, 10%);
+        }
+
+        &.active {
+            background: $second-color;
+            font-weight: bold;
+        }
+    }
+
+    & .more-info-content {
+        border: 1px solid $second-color;
+    }
+}
+
+.tab-content {
+    max-height: 370px;
+    background: darken($second-light-color, 1%);
+    overflow: scroll;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid $second-color;
+}
+
+.tab-pane {
+    padding: 40px !important;
+    @include paragraph;
+    color: $main-color;
 }
