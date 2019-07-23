@@ -375,7 +375,7 @@
           ?>
       </div>
       <div class="col-md-5 most-liked-tags">
-        <h5>Os termos mais buscados em nosso blog</h5>
+        <h5>Os termos mais mencionados em nosso blog</h5>
         <hr>
         <div class="row">
           <div class="col-md-12">
@@ -413,41 +413,9 @@
           // reset post data (important!)
           wp_reset_postdata();
         ?>
-        <form action="#">
-          <div class="form-group my-4">
-            <input type="text" class="form-control" placeholder="Seu nome">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Seu melhor e-mail">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-2">
-              <input type="text" class="form-control" placeholder="DDD">
-            </div>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" placeholder="Telefone">
-            </div>
-            <div class="form-group col-md-6">
-              <div class="form-check">
-                <input type="checkbox" name="" id="msgMeWpp" class="form-check-input">
-                <label for="msgMeWpp">Contacte-me pelo Whatsapp</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea name="" id="" rows="4" class="form-control"></textarea>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="" id="emailMe" class="form-check-input">
-            <label for="emailMe">Desejo receber novidades e promoções por e-mail</label>
-          </div>
-          <a href="#" class="mt-4 btn">Enviar mensagem</a>
-        </form>
       </div>
       <div class="col-md-5 offset-md-1">
         <div class="row">
-          <!-- <iframe width="100%" height="360" src="https://maps.google.com/maps?width=100%&amp;height=360&amp;hl=en&amp;q=Av.%20Nove%20de%20Julho%2C%203575%20-%20Anhangaba%C3%BA%20-%20Jundia%C3%AD%2C%20SP+(Hype%20Tur%20Viagens%20e%20Turismo)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-          </iframe> -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.1087971786023!2d-46.893944585007375!3d-23.20270535433016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf32ab9d105df5%3A0xf0d736a914cd4669!2sHype+Tur!5e0!3m2!1spt-BR!2sbr!4v1563415352504!5m2!1spt-BR!2sbr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="row mt-4">

@@ -12,7 +12,7 @@
     margin: 0;
   }
 
-  a {
+  a, input[type=submit] {
     display: inherit;
     margin: 1rem 0;
     @include button-std;

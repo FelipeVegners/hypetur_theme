@@ -14,10 +14,6 @@
         }
     }
 
-    & ul {
-        margin-left: 24px;
-    }
-
     & li {
         margin-bottom: 1rem;
     }
@@ -146,4 +142,8 @@ button.buy-package {
     padding: 40px !important;
     @include paragraph;
     color: $main-color;
+
+    & ul {
+        margin-left: 40px;
+    }
 }
