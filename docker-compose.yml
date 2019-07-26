@@ -7,10 +7,10 @@ services:
     container_name: hypetur_mysql
     volumes:
       - db_data:/var/lib/mysql
-    restart: always
+    # restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpress
+      MYSQL_DATABASE: hypet093_wp679
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     networks:
@@ -45,6 +45,7 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: hypet093_wp679
     networks:
       - wpsite
 networks:

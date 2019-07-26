@@ -1,11 +1,9 @@
 node_modules
 .DS_STORE
-*.php
-!/wp-content/themes/**/*.php
 readme.html
 license.txt
 wp-admin
 wp-includes
-!bkp
 wp-content/plugins/**/**
+wp-content/plugins
 .htaccess
