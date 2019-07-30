@@ -21,10 +21,7 @@
 			<!-- /post title -->
 
 			<!-- post details -->
-			<span class="blog__post__author">por <?php the_author_posts_link(); ?>em <?php the_time("d/m/Y"); ?></span>
-			<span class="post-author">por <?php the_author();?> </span>
-
-			<!-- <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
+			<span class="blog__post__author">por <?php the_author_posts_link(); ?> - em <?php the_time("d/m/Y"); ?></span>
 			<!-- /post details -->
 
 			<?php hypeturwp_excerpt('hypeturwp_index'); // Build your custom callback length in functions.php ?>

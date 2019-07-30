@@ -28,7 +28,7 @@
 
 	<section class="blog" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="container-fluid blog__topbar">
-			<a href="/blog" class="back-home">Ver todos os posts</a>
+			<a href="../blog" class="back-home">Ver todos os posts</a>
 		</div>
 		<div class="container">
 			<div class="row">
