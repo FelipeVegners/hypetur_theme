@@ -3,6 +3,7 @@
 <div class="container">
 	<div class="row">
 		<section class="col-md-12">
+			foooo
 			<h1><?php single_cat_title( '', true ); ?></h1>
 			<p class="posts-count"><?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> post publicado <?php } else { echo $wp_query->found_posts ?> posts publicados <?php } ?></p>
 			<?php echo category_description(); ?>

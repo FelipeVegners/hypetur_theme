@@ -20,7 +20,7 @@
 <body <?php body_class(); ?>>
   <header id="top" class="nav__wrapper">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="../">
+      <a class="navbar-brand" href="./">
         <h1 class="-logo">
           <?php bloginfo('name')?>
         </h1>

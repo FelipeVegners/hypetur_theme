@@ -1,6 +1,6 @@
 // Hype Tur Theme Typography
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,300i,500i,700,700i');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 
 // Font Family
 $title-font: 'Roboto Slab', serif;
@@ -35,7 +35,7 @@ $normal-bold: 700;
 @mixin heading-1 {
   font-family: $title-font;
   font-weight: $title-bold;
-  font-size: 1rem * 2;
+  font-size: 2rem;
   line-height: 1.5;
 }
 

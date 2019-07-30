@@ -82,14 +82,20 @@
     }
 }
 
-button.buy-package {
+.buy-package {
     @include button-std;
+    display: block;
     background: $main-color;
     margin: 2rem 0 0;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48px;
 
     &:hover {
         background-color: darken($main-color, 10%);
         letter-spacing: 0.2pt;
+        text-decoration: none;
+        color: $white;
     }
 
     &:active {

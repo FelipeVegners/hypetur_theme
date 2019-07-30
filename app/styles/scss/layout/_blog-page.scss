@@ -5,30 +5,72 @@
 
   &__topbar {
     position: sticky;
+    display: flex;
+    align-items: center;
     top: 0;
     padding: 8px;
     margin-bottom: 60px;
     height: 60px;
     background: $main-color;
-    border-bottom: 4px solid $main-dark-color;
+    box-shadow: 0px 0px 20px 5px rgba($main-color, 0.3);
+    // border-bottom: 4px solid $main-dark-color;
     z-index: 9999;
+
+    & .back-home {
+      position: relative;
+      margin-left: 3rem;
+      color: $white;
+      font-size: 0.75rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: -10px;
+        width: 10px;
+        height: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: $white;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: $white;
+        transform: rotate(-45deg);
+        transition: all .25s ease-in;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        &:before {
+          left: -15px;
+          border-top-color: $second-color;
+          border-left-color: $second-color;
+        }
+      }
+    }
   }
 
   &__list {
-    padding: 40px 0;
+    padding: 20px;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    border-top: 1px solid $main-color;
+
+    &:nth-child(even) {
+      background: #fff;
+    }
 
     &__image {
       width: 320px;
-      height: 180px;
+      height: 180px !important;
       margin-right: 20px;
       overflow: hidden;
 
-      & > img.wp-post-image {
+      &>img.wp-post-image {
         margin-bottom: 0 !important;
         object-fit: cover;
+        height: 180px !important;
       }
     }
 
@@ -37,6 +79,65 @@
       flex-direction: column;
       margin-left: 20px;
       width: 100%;
+    }
+  }
+
+  &__post {
+
+    &__title {
+      display: block;
+      @include heading-2;
+      color: $main-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $main-color;
+      }
+    }
+
+    &__about img {
+      border-radius: 100%;
+      border: 3px solid $second-color;
+    }
+
+    &__author {
+      display: block;
+      margin-bottom: 1rem;
+      @include paragraph-i;
+      font-size: 0.875rem;
+      color: $main-color;
+      letter-spacing: normal;
+
+      &>.name,
+      a {
+        color: $main-color;
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  &__social {
+
+    &__list {
+      display: flex;
+      list-style-type: none;
+      padding: 0.5rem 0;
+
+      & li {
+        margin-right: 0.5rem;
+      }
+
+      & li > a > i {
+        font-size: 1.35rem;
+        color: $main-color;
+        opacity: 0.7;
+        transition: all .25s ease-in;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }

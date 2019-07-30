@@ -48,7 +48,8 @@
         </div>
         <div class="row mt-5">
           <div class="col-md-9 offset-md-1">
-            <h2 class="my-3"><?php _e( 'Posts recentes', 'hypetur' ); ?></h2>
+            <h2>Posts recentes</h2>
+            <div class="h-divisor"></div>
           </div>
         </div>
         <div class="row">

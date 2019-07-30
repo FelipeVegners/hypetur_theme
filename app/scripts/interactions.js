@@ -46,7 +46,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top - 103
+      scrollTop: $($(this).attr("href")).offset().top - 73
     }, 900);
   });
 
@@ -73,5 +73,17 @@ $(document).ready(function () {
       }, 900);
     });    
   }
+
+  // Close WP Contact Form 7 alerts
+  $('.wpcf7-response-output').on('click', function() {
+    $(this).fadeOut();
+  });
+  
+  $('.wpcf7').on('wpcf7submit', function() {
+    $('.wpcf7-response-output').delay(5000).fadeOut();
+    $('html, body').delay(5000).animate({
+      scrollTop: $('.contact-section').offset().top - 73
+    });
+  });
 
 });

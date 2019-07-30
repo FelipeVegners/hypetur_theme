@@ -59,33 +59,13 @@
           <div class="col-md-5 inset-md-1 package-price">
             <div class="row">
               <div class="col-md-12">
-                <h2>Valor do Pacote</h2>
-                <p class="mb-0">Entrada de:</p>
-                <h2>R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>
-                <p class="mb-0">Saldo em:</p>
+                <h2 class="mb-3">Valor do Pacote:</h2>
+                <h3 class="mb-0">Entrada:</h3>
+                <h2 class="mb-3">R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>
+                <h3 class="mb-0">Saldo em:</h3>
                 <h2><?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h2>
                 <small><?php echo $package_meta['package_price_disclaimer'][0] ?></small>
-                <button class="buy-package" data-toggle="modal" data-target="#exampleModal">Fazer reserva</button>
-                <!-- Modal
-                <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        Fooooooo
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+                <a href="https://api.whatsapp.com/send?l=pt_br&phone=5511953845396&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote:%20<?php echo $package_meta['package_title'][0] ?>" target="blank" class="buy-package">Fazer reserva</a>
               </div>
             </div>
           </div>
@@ -354,10 +334,10 @@
         ?>
       </div>
       <div class="col-md-7 last-post-column">
-        <h5><em>Último Post</em></h5>
+        <h5><em>Últimos Posts</em></h5>
         <hr>
         <?php
-            query_posts('showposts=1');
+            query_posts('showposts=2');
             if(have_posts()):
               while(have_posts()): the_post(); 
         ?>
@@ -368,6 +348,7 @@
           <button type="button" class="show-full-post">
             <a href="<?php the_permalink(); ?>">Continuar lendo</a>
           </button>
+          <div class="h-divisor"></div>
           <?php endwhile;
             else:
               echo '<p>Nenhum post encontrado</p>';
@@ -389,7 +370,7 @@
         <div class="row">
           <div class="col-md-12">
           <button type="button" class="show-full-post">
-            <a href="/blog">Ver todos os posts</a>
+            <a href="./blog">Ver todos os posts</a>
           </button>
           </div>
         </div>

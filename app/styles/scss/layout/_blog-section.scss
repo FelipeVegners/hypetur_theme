@@ -58,7 +58,7 @@ a.tag-cloud-link {
 button.show-full-post {
     @include button-std;
     background: $main-color;
-    margin: 1rem 0 0;
+    margin: 2rem 0 0;
     padding: 0.375rem 0.75rem;
 
     &:hover {
