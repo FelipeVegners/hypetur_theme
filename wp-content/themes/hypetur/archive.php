@@ -28,7 +28,7 @@
 
 	<section class="blog">
 		<div class="container-fluid blog__topbar">
-			<a href="/blog" class="back-home">Voltar para o blog</a>
+			<a href="../../blog" class="back-home">Voltar para o blog</a>
 		</div>
 		<div class="container">
       <div class="row">
