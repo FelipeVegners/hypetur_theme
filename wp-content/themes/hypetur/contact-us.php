@@ -40,12 +40,6 @@
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <a href="#" class="mt-4 btn debit-form">Autorização de Débito</a>
-            <small>*Faça o download e preencha corretamente os campos para autorizar o débito das despesas de sua viagem.</small>
-          </div>
-        </div>
       </div>
     </div>
   </div>
