@@ -7,17 +7,27 @@
 
   &__logos {
 
-    & > ul {
+    &>ul {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
       padding: 2rem 0;
       list-style: none;
 
-      & > li > img {
+      @media screen and (max-width: 768px) {
+        justify-content: space-evenly;
+      }
+
+      &>li>img {
         margin-right: 3rem;
         width: 100px;
         height: 100px;
         object-fit: cover;
+      
+        @media screen and (max-width: 768px) {
+          margin-right: 0;
+        }        
       }
     }
   }
