@@ -33,7 +33,7 @@
         </div>
         <div class="row destination-price">
           <div class="col-md-6">
-            <div class="row justify-content-center">
+            <div class="row package-includes">
               <?php 
                 $includes = $package_meta['package_includes'];
                 foreach ( $includes as $include ) {
@@ -56,7 +56,7 @@
           </div>
           <div class="col-md-5 inset-md-1 package-price">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 text-center text-md-left">
                 <h2 class="mb-3">Valor do Pacote:</h2>
                 <h3 class="mb-0">Entrada:</h3>
                 <h2 class="mb-3">R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>

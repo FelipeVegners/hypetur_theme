@@ -7,7 +7,7 @@
           <img src="<?php echo get_template_directory_uri();?>/images/icons/service-category-1.svg" alt="">
           <h3>A HypeTur atende clientes que desejam viajar a turismo ou negócios </h3>
         </div>
-        <div class="col-md-4 offset-md-1">
+        <div class="col-md-4 offset-md-1 text-center">
           <div class="row align-items-center service-icon-wrapper">
             <div class="col-md-3 text-center">
               <img src="<?php echo get_template_directory_uri();?>/images/icons/service-ticket.svg" alt="">
@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <div class="row align-items-center service-icon-wrapper">
             <div class="col-md-3 text-center">
               <img src="<?php echo get_template_directory_uri();?>/images/icons/service-car.svg" alt="">
@@ -81,7 +81,7 @@
           <img src="<?php echo get_template_directory_uri();?>/images/icons/service-category-2.svg" alt="">
           <h3>Pacotes Especiais para Datas Especiais</h3>
         </div>
-        <div class="col-md-4 offset-md-1">
+        <div class="col-md-4 offset-md-1 text-center">
           <div class="row align-items-center service-icon-wrapper">
             <div class="col-md-3 text-center">
               <img src="<?php echo get_template_directory_uri();?>/images/icons/service-honeymoon.svg" alt="">
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <div class="row align-items-center service-icon-wrapper">
             <div class="col-md-3 text-center">
               <img src="<?php echo get_template_directory_uri();?>/images/icons/service-ski.svg" alt="">

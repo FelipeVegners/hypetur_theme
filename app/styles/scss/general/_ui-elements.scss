@@ -26,6 +26,9 @@
     width: 100%;
     border-top: 1px solid $main-color;
     opacity: .2;
+    @media screen and (max-width: 425px) {
+        margin: 1rem 0;
+    }    
 
     &:not(:first-of-type):last-of-type {
         display: none;

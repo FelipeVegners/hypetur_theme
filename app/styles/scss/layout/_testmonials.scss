@@ -8,13 +8,17 @@
         @include paragraph-i;
         font-size: 0.875rem;
         line-height: 1.85;
+
+        @media screen and (max-width: 425px) {
+            text-align: center;
+        }
     }
 
     & h5 {
         @include paragraph-strong;
         font-size: 0.875rem;
         position: relative;
-        margin-top: 2rem;
+        margin-top: 2rem;      
 
         &:before {
             content: '';
@@ -24,8 +28,14 @@
             width: 30px;
             height: 2px;
             background: $second-color;
-
         }
+        @media screen and (max-width: 425px) {
+            text-align: center;
+            &:before {
+                margin: 0 auto;
+                left: calc(50% - 15px);
+            }
+        }        
     }
 
     & ul {
@@ -52,15 +62,27 @@
     height: 16px;
     background: url('images/icons/quotes-icon.svg') center center /contain no-repeat;
     padding-bottom: 0.5rem;
+
+    @media screen and (max-width: 425px) {
+        margin: 0 auto;
+        margin-bottom: 24px;
+
+    }
 }
 
 .testimonial-picture {
-    float: right !important;
+    float: right;
     width: 110px !important;
     height: 110px !important;
     border-radius: 55px !important;
     object-fit: cover !important;
     border: 4px solid $second-color;
+
+    @media screen and (max-width: 425px) {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
 }
 
 .owl-nav {

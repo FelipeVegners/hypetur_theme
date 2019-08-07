@@ -2,7 +2,7 @@
   <div class="container">
       <h1 class="section-title">Fale conosco</h1>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <?php
           // query for the page
           $page_query = new WP_Query( 'pagename=fale-conosco' );
@@ -20,7 +20,7 @@
         </div>
         <div class="row mt-4">
           <div class="col-md-4">
-            <img src="<?php bloginfo('template_url');?>/images/brand/normal-brand.svg" alt="" width="100%">
+            <img src="<?php bloginfo('template_url');?>/images/brand/normal-brand.svg" alt="Logo HypeTur Viagens e Turismo">
           </div>
         </div>
         <div class="row mt-4">
