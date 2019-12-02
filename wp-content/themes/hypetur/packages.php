@@ -19,8 +19,11 @@
         <small><?php echo $package_meta['country'][0] ?></small>
         <p class="dest-period"><?php echo $package_meta['period'][0] ?></p>
         <p class="mb-0"><?php echo $package_meta['intro'][0] ?></p>
-        <p><?php echo $package_meta['testmonial'][0] ?></p>
-        <button class="more-info-btn">Quero saber mais!</button>
+          <?php
+            if ($package_meta['external_url_option'][0] == 'yes')
+              echo "<a class='more-info-link' href='http://".$package_meta['external_url'][0]."' target='_blank'>Quero saber mais!</a>"
+          ?>
+          <!-- <button class='more-info-btn'>Quero saber mais!</button> -->
       </div>      
     </section>
     <section class="destination-about">

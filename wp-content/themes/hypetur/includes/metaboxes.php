@@ -78,6 +78,21 @@
               'image_size' => 'thumbnail',
             ),
             array(
+              'id' => 'external_url_option',
+              'name' => __('Botão aponta para Link externo?', 'hype-tur'),
+              'type' => 'radio',
+              'options' => array(
+                  'yes' => 'SIM',
+                  'no' => 'NÃO',
+                ),
+                'inline' => true,
+            ),
+            array(
+              'id' => 'external_url',
+              'name' => __('URL externa para o botão:', 'hype-tur'),
+              'type' => 'input',
+            ),
+            array(
               'id' => 'package_title',
               'name' => __('Título do Pacote Promocional:', 'hype-tur'),
               'type' => 'textarea'

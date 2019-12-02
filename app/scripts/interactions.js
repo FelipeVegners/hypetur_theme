@@ -43,8 +43,6 @@ $(document).ready(function () {
 
   // Add smooth scroll to anchors
   $(".nav-link").on('click', function (event) {
-    event.preventDefault();
-
     $("html, body").animate({
       scrollTop: $($(this).attr("href")).offset().top - 73
     }, 900);
