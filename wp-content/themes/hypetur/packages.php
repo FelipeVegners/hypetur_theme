@@ -5,7 +5,7 @@
     'post_status' => 'publish',
     'nopaging' => true,
     'orderby' => 'meta_value_num',
-    'order' => 'ASC'
+    'order' => 'DESC'
     );
     $query = new WP_Query($args);
     $packages = $query->posts;
