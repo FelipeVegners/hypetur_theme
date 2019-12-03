@@ -19,12 +19,14 @@
         <small><?php echo $package_meta['country'][0] ?></small>
         <p class="dest-period"><?php echo $package_meta['period'][0] ?></p>
         <p class="mb-0"><?php echo $package_meta['intro'][0] ?></p>
-          <?php
-            if ($package_meta['external_url_option'][0] == 'yes')
-              echo "<a class='more-info-link' href='http://".$package_meta['external_url'][0]."' target='_blank'>Quero saber mais!</a>"
+        <?php
+          if ($package_meta['external_url_option'][0] == 'yes'):
+              echo "<a class='more-info-link' href='http://".$package_meta['external_url'][0]."' target='_blank'>Quero saber mais!</a>";
+          else:
+              echo "<button class='more-info-btn'>Quero saber mais!</button>";
+          endif;
           ?>
-          <!-- <button class='more-info-btn'>Quero saber mais!</button> -->
-      </div>      
+      </div>
     </section>
     <section class="destination-about">
       <div class="container">

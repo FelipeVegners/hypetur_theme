@@ -85,13 +85,14 @@
                   'yes' => 'SIM',
                   'no' => 'NÃO',
                 ),
-                'inline' => true,
+              'inline' => true,
             ),
             array(
               'id' => 'external_url',
               'name' => __('URL externa para o botão:', 'hype-tur'),
-              'type' => 'input',
-            ),
+              'type' => 'text',
+              'hidden' => array('external_url_option', '=', 'no')
+            ), 
             array(
               'id' => 'package_title',
               'name' => __('Título do Pacote Promocional:', 'hype-tur'),
