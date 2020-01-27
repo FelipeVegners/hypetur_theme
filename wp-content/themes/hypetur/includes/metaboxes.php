@@ -1,6 +1,6 @@
 <?php
     // Meta Box creates Admin Custom Menu
-    function create_post_type_package() {
+    function create_post_type_promo_package() {
       $labels = array(
           'name'                => __('Pacotes Promocionais | Home Page', 'hype-tur'),
           'singular_name'       => __('Pacotes', 'hype-tur'),
@@ -15,7 +15,6 @@
           'not_found_in_trash'  => __('Nenhum pacote no lixo', 'hype-tur'),
           'menu_name'           => __('Pacotes Promocionais', 'hype-tur'),
       );
-  
       $supports = array('title', 'thumbnail');
       $args = array(
           'labels'             => $labels,
@@ -28,17 +27,17 @@
           'capability_type'    => 'post',
           'has_archive'        => false,
           'hierarchical'       => false,
-          'menu_position'      => 2,
+          'menu_position'      => 1,
           'supports'           => $supports,
           'menu_icon'          => 'dashicons-tickets-alt',
       );
       register_post_type('promo-package', $args);
   }
-  add_action('init', 'create_post_type_package');
+  add_action('init', 'create_post_type_promo_package');
 
   // CREATES METABOX LOOP
-  function create_metabox_package($meta_boxes_package) {
-    $meta_boxes_package[] = array(
+  function create_metabox_promo_package($meta_boxes_promo_package) {
+    $meta_boxes_promo_package[] = array(
         'title'      => __('Informações do Pacote Anunciado', 'hype-tur'),
         'post_types' => array('promo-package'),
         'fields'     => array(
@@ -153,9 +152,68 @@
         )
     );
 
-      return $meta_boxes_package;
-    }
-    add_filter('rwmb_meta_boxes', 'create_metabox_package');
+      return $meta_boxes_promo_package;
+  }
+    add_filter('rwmb_meta_boxes', 'create_metabox_promo_package');
+
+///////////////////////////////////
+
+  // Metabox for Testimonials Admin Custom Menu
+  function create_post_type_travel_package() {
+    $labels = array(
+        'name'                => __('Pacotes de Viagem', 'hype-tur'),
+        'singular_name'       => __('Pacote de Viagem', 'hype-tur'),
+        'add_new'             => __('Adicionar Pacote', 'hype-tur'),
+        'add_new_item'        => __('Adicionar Pacote', 'hype-tur'),
+        'edit_item'           => __('Editar Pacote', 'hype-tur'),
+        'new_item'            => __('Novo Pacote', 'hype-tur'),
+        'all_items'           => __('Todos os Pacotes', 'hype-tur'),
+        'view_item'           => __('Visualizar Pacote', 'hype-tur'),
+        'search_items'        => __('Buscar Pacote', 'hype-tur'),
+        'not_found'           => __('Nenhum Pacote encontrado', 'hype-tur'),
+        'not_found_in_trash'  => __('Nenhum Pacote no lixo', 'hype-tur'),
+        'menu_name'           => __('Pacotes de Viagem', 'hype-tur'),
+    );
+
+    $supports = array('title', 'thumbnail');
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'hype-tur'),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => 2,
+        'supports'           => $supports,
+        'menu_icon'           => 'dashicons-palmtree',
+    );
+    register_post_type('travel_package', $args);
+}
+add_action('init', 'create_post_type_travel_package');
+
+// CREATES METABOX LOOP FOR TRAVEL PACKAGES
+function create_metabox_travel_package($meta_boxes_travel_package) {
+  $meta_boxes_travel_package[] = array(
+      'title'      => __('Pacotes de Viagem', 'hype-tur'),
+      'post_types' => array('travel_package'),
+      'fields'     => array(
+          array(
+              'id'   => 'travel_package-group',
+              'name' => __('Grupo do Pacote:', 'hype-tur'),
+              'type' => 'select',
+          ),
+      )
+  );
+
+    return $meta_boxes_travel_package;
+}
+  add_filter('rwmb_meta_boxes', 'create_metabox_travel_package');
+
+///////////////////////////////////
 
   // Metabox for Testimonials Admin Custom Menu
   function create_post_type_testimonial() {
@@ -194,7 +252,7 @@
 }
 add_action('init', 'create_post_type_testimonial');
 
-// CREATES METABOX LOOP
+// CREATES METABOX LOOP FOR TESTMONIALS
 function create_metabox_testimonial($meta_boxes_testimonial) {
   $meta_boxes_testimonial[] = array(
       'title'      => __('Depoimentos de Clientes', 'hype-tur'),
@@ -233,8 +291,10 @@ function create_metabox_testimonial($meta_boxes_testimonial) {
           
       )
   );
-
     return $meta_boxes_testimonial;
-  }
+}
   add_filter('rwmb_meta_boxes', 'create_metabox_testimonial');
+
+///////////////////////////////////
+
 ?>
