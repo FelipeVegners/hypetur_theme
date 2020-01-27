@@ -195,6 +195,19 @@
 }
 add_action('init', 'create_post_type_travel_package');
 
+function getCats() {
+  $out = array();
+  $categories = get_categories();
+  foreach( $categories as $category ) {
+      $out[$category->term_id] = array(
+          'label' => $category->slug,
+          'value' => $category->term_id
+      );
+  }
+  //return array('options'=>$out);
+  return $out;
+}
+
 // CREATES METABOX LOOP FOR TRAVEL PACKAGES
 function create_metabox_travel_package($meta_boxes_travel_package) {
   $meta_boxes_travel_package[] = array(
@@ -205,6 +218,7 @@ function create_metabox_travel_package($meta_boxes_travel_package) {
               'id'   => 'travel_package-group',
               'name' => __('Grupo do Pacote:', 'hype-tur'),
               'type' => 'select',
+              'options' => getCats()
           ),
       )
   );
