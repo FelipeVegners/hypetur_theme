@@ -2,6 +2,8 @@
 
 <!-- PROMO PACKAGES -->
 <?php get_template_part('packages'); ?>
+<!-- TRAVEL PACKAGES -->
+<?php get_template_part('travel-packages-intro'); ?>
 <!-- SERVICES -->
 <?php get_template_part('services'); ?>
 <!-- ABOUT US -->

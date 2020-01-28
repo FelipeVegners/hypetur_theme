@@ -158,7 +158,7 @@
 
 ///////////////////////////////////
 
-  // Metabox for Testimonials Admin Custom Menu
+  // Metabox for Travel Packages Admin Custom Menu
   function create_post_type_travel_package() {
     $labels = array(
         'name'                => __('Pacotes de Viagem', 'hype-tur'),
@@ -173,6 +173,7 @@
         'not_found'           => __('Nenhum Pacote encontrado', 'hype-tur'),
         'not_found_in_trash'  => __('Nenhum Pacote no lixo', 'hype-tur'),
         'menu_name'           => __('Pacotes de Viagem', 'hype-tur'),
+        'category'            => __('Categorias', 'hype-tur'),
     );
 
     $supports = array('title', 'thumbnail');
@@ -183,9 +184,9 @@
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array('slug' => 'hype-tur'),
+        'rewrite'            => array('slug' => 'pacotes-de-viagem/%roteiro%'),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => 'pacotes-de-viagem',
         'hierarchical'       => false,
         'menu_position'      => 2,
         'supports'           => $supports,
@@ -195,30 +196,52 @@
 }
 add_action('init', 'create_post_type_travel_package');
 
-function getCats() {
+function wpa_package_post_link( $post_link, $post ){
+    if ( is_object( $post ) && 'travel_package' == get_post_type( $post ) ) {
+        $terms = wp_get_object_terms( $post->ID, 'roteiro' );
+        if( $terms ){
+            return str_replace( '%roteiro%' , $terms[0]->slug , $post_link );
+        }
+    }
+    return $post_link;  
+}
+add_filter( 'post_type_link', 'wpa_package_post_link', 1, 3 );
+
+function getCategories() {
   $out = array();
   $categories = get_categories();
   foreach( $categories as $category ) {
       $out[$category->term_id] = array(
-          'label' => $category->slug,
+          'label' => $category->name,
           'value' => $category->term_id
       );
   }
-  //return array('options'=>$out);
+  return $out;
+}
+
+function getTags() {
+  $out = array();
+  $tags = get_tags();
+  foreach( $tags as $tag ) {
+    $out[$tag->term_id] = array(
+      'label' => $tag->name,
+      'value' => $tag->term_id
+    );
+  }
   return $out;
 }
 
 // CREATES METABOX LOOP FOR TRAVEL PACKAGES
 function create_metabox_travel_package($meta_boxes_travel_package) {
   $meta_boxes_travel_package[] = array(
-      'title'      => __('Pacotes de Viagem', 'hype-tur'),
+      'title'      => __('Informações do Pacote'),
       'post_types' => array('travel_package'),
       'fields'     => array(
           array(
               'id'   => 'travel_package-group',
-              'name' => __('Grupo do Pacote:', 'hype-tur'),
+              'name' => __('Grupo do Pacote:'),
               'type' => 'select',
-              'options' => getCats()
+              'options' => getCategories()
           ),
       )
   );
