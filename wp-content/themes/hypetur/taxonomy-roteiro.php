@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
@@ -25,21 +25,20 @@
 	</head>
 
   <body <?php body_class(); ?>>
-
+	
 	<section class="blog">
 		<div class="container-fluid blog__topbar">
-			<a href="../" class="back-home">Voltar para o site</a>
+			<a href="../" class="back-home">Voltar</a>
 		</div>
 		<div class="container">
       <div class="row">
         <div class="col-md-9 offset-md-1">
-					<p>Você buscou pelo termo:</p>
-					<h1><?php single_cat_title( '', true ); ?></h1>
+					<h1>Pacotes para <?php single_cat_title( '', true ); ?></h1>
 					<p class="posts-count">
 						Nós temos 
-						<?php if ( $wp_query->found_posts == 5){ echo $wp_query->found_posts ?> post publicado 
-						<?php } else { echo $wp_query->found_posts ?> posts publicados <?php } ?>
-						com este tema, confira:
+						<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> roteiro disponível,
+						<?php } else { echo $wp_query->found_posts ?> roteiros disponíveis, <?php } ?>
+						confira:
 					</p>
 					<?php echo category_description(); ?>
 				</div>
@@ -89,4 +88,4 @@
 		</div>
 	</section>
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
