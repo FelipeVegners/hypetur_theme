@@ -184,7 +184,7 @@
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array('slug' => 'pacotes-de-viagem/%roteiro%'),
+        'rewrite'            => array('slug' => 'pacotes-de-viagem/%destino%'),
         'capability_type'    => 'post',
         'has_archive'        => 'pacotes-de-viagem',
         'hierarchical'       => false,
@@ -198,9 +198,9 @@ add_action('init', 'create_post_type_travel_package');
 
 function wpa_package_post_link( $post_link, $post ){
     if ( is_object( $post ) && 'travel_package' == get_post_type( $post ) ) {
-        $terms = wp_get_object_terms( $post->ID, 'roteiro' );
+        $terms = wp_get_object_terms( $post->ID, 'destino' );
         if( $terms ){
-            return str_replace( '%roteiro%' , $terms[0]->slug , $post_link );
+            return str_replace( '%destino%' , $terms[0]->slug , $post_link );
         }
     }
     return $post_link;  
