@@ -36,8 +36,8 @@
 					<h1>Pacotes para <?php single_cat_title( '', true ); ?></h1>
 					<p class="posts-count">
 						Nós temos 
-						<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> roteiro disponível,
-						<?php } else { echo $wp_query->found_posts ?> roteiros disponíveis, <?php } ?>
+						<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> destino disponível,
+						<?php } else { echo $wp_query->found_posts ?> destinos disponíveis, <?php } ?>
 						confira:
 					</p>
 					<?php echo category_description(); ?>

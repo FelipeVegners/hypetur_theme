@@ -31,6 +31,9 @@ define( 'DB_PASSWORD', 'wordpress');
 /** MySQL hostname */
 define( 'DB_HOST', 'db:3306');
 
+/** Access through http://www.yoursite.com/wp-admin/maint/repair.php */
+define('WP_ALLOW_REPAIR', true);
+
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8');
 

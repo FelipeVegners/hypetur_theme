@@ -6,7 +6,7 @@
         <?php if (have_posts()): 
           $args = array(
               'post_type' => 'travel_package',
-              // 'category_name'=> 'blogposts',
+              'posts_per_page' => '6'
           );
           $loop = new WP_Query( $args );
           while ( $loop->have_posts() ) : $loop->the_post();
