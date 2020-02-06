@@ -42,7 +42,8 @@ services:
       - '8080:80'
     restart: always
     user: root
-    volumes: ['./:/var/www/html']
+    volumes:
+      - ./:/var/www/html
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress

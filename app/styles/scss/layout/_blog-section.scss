@@ -79,6 +79,30 @@ button.show-full-post {
     }
 }
 
+button.close-btn {
+    @include button-std;
+    margin: 2rem 0 2rem;
+    background: $main-color;
+    padding: 0.375rem 0.75rem;
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: darken($main-color, 10%);
+        letter-spacing: 0.2pt;
+    }
+
+    &:active {
+        background-color: $main-color;
+    }
+    & a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
 img.wp-post-image {
     margin-bottom: 1rem;
     width: 100%;

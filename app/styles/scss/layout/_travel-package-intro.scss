@@ -1,0 +1,30 @@
+
+// Styles for Travel Package Destinations Intro
+
+.packages-intro {
+  position: relative;
+  margin: 48px 0;
+
+  .view-all-packages {
+    @include button-std;
+    width: 100%;
+    margin-top: 1rem;
+    display: block;
+    background: $second-color;
+    font-size: 16px;
+    color: $main-color;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background-color: darken($second-color, 10%);
+        letter-spacing: 0.2pt;
+    }
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        margin: 2rem auto;
+    }
+  }
+}

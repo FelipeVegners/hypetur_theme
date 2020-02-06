@@ -96,6 +96,11 @@
             </div>
           </div>
       </div>
+      <div class="row">
+      <div class="col-12 text-center">
+        <button class="close-btn">Fechar</button>
+      </div>
+      </div>
     </section>
   </div>
 <!-- END CAROUSEL -->

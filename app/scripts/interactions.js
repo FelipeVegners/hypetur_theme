@@ -32,13 +32,20 @@ $(document).ready(function () {
   });
 
   $('.more-info-btn').click(function () {
-
     $('.promo-package').slick('slickPause');
     $('.destination-about').slideDown(450);
     $('html, body').animate({
       scrollTop: $(".destination-about").offset().top - 20
     }, 450);
     
+  });
+
+  $('.close-btn').click(function () {
+    $('.destination-about').slideUp(450);
+    $('html, body').animate({
+      scrollTop: 0
+    }, 450);
+    $('.promo-package').slick('slickPlay');
   });
 
   // Add smooth scroll to anchors
