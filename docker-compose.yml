@@ -5,9 +5,11 @@ services:
   db:
     image: mysql:5.7
     container_name: hypetur_mysql
+    ports:
+      - '3306:3306'
     volumes:
       - db_data:/var/lib/mysql
-    # restart: always
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: wordpress

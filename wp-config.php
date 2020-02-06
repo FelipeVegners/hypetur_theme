@@ -31,14 +31,14 @@ define( 'DB_PASSWORD', 'wordpress');
 /** MySQL hostname */
 define( 'DB_HOST', 'db:3306');
 
-/** Access through http://www.yoursite.com/wp-admin/maint/repair.php */
-define('WP_ALLOW_REPAIR', true);
-
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '');
+
+/** Access through http://www.yoursite.com/wp-admin/maint/repair.php */
+define('WP_ALLOW_REPAIR', true);
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -49,14 +49,14 @@ define( 'DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'e3c0c0b8efe05ba513f3f707f18ade016d37e127');
-define( 'SECURE_AUTH_KEY',  'ccfbda6ce3cc3cf46777ce5a1da6ba4621f524ae');
-define( 'LOGGED_IN_KEY',    '860e6db25163bfd4cc423219c443673cdc97bff3');
-define( 'NONCE_KEY',        '3b0722720bd9c92004828aed121a814b4617956b');
-define( 'AUTH_SALT',        '3ca4a22eb4ce66e7455d9f2c5ec271d3b608bfad');
-define( 'SECURE_AUTH_SALT', '1d4a3070ed690d13d4a7c7bdf1e7dc77fc61f998');
-define( 'LOGGED_IN_SALT',   '4fa7f2745d7c8651e6ed1f9d3b9cb6a5ec6b5598');
-define( 'NONCE_SALT',       '4de3086f2317de4d17f6ba8ed8dc1de3c67e4c96');
+define( 'AUTH_KEY',         '54178ac27ddb4504f3672e30526811a3903be688');
+define( 'SECURE_AUTH_KEY',  '14d799d83b69c8a3a70e29c9b86fb12c63f06d23');
+define( 'LOGGED_IN_KEY',    'd85ddffd79f9c82f7fb9a7ed3f03c3a5ff997562');
+define( 'NONCE_KEY',        'c29e45926de91353aeda4aca2fbb087d7ebfa0d9');
+define( 'AUTH_SALT',        'ef65cc561305d8ee5a46413edc8a8f9aa1b8d8b7');
+define( 'SECURE_AUTH_SALT', '768938f6c344775eaa00bcac95ef9f84955c65ae');
+define( 'LOGGED_IN_SALT',   '231ede1ceefb4baf2065649c7ba070ab87f9e0d5');
+define( 'NONCE_SALT',       '226b31905e166581790796dbe61bd3d0f3ab83d7');
 
 /**#@-*/
 
@@ -82,12 +82,6 @@ $table_prefix = 'wp2c_';
  */
 define( 'WP_DEBUG', false );
 
-// If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
-// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-	$_SERVER['HTTPS'] = 'on';
-}
-
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
@@ -97,6 +91,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
-
-/* That's all, stop editing! Happy blogging. */
-define('FS_METHOD', 'direct');
