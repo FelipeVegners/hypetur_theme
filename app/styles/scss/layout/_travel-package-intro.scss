@@ -3,7 +3,17 @@
 
 .packages-intro {
   position: relative;
-  margin: 48px 0;
+  margin: 72px 0;
+  padding: 5rem 0 2rem 0;
+
+  .card {
+    width: 100%;
+
+    @media screen and (min-width: 425px) {
+      margin-bottom: 2.5rem;
+      width: calc(33% - .5rem)
+    }
+  }
 
   .view-all-packages {
     @include button-std;
@@ -26,5 +36,14 @@
         width: 100%;
         margin: 2rem auto;
     }
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .show-full-post {
+    margin-top: 0;
   }
 }

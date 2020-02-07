@@ -11,4 +11,4 @@ wp-content/plugins/**/**
 .htaccess
 wp-content/languages
 wp-content/updraft
-wp-content/uploads
+# wp-content/uploads
