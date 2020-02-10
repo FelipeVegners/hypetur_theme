@@ -1,6 +1,6 @@
 <section id="packages-intro" class="packages-intro">
   <div class="container">
-    <h1 class="section-title">Pacotes de viagem</h1>
+    <h1 class="section-title">Destinos</h1>
     <div class="col-md-12">
       <div class="row py-4 d-flex justify-content-between">
       <!-- Get taxonomy images (needs Taxonomy Images plugin) -->
