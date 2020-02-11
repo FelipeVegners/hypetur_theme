@@ -26,7 +26,7 @@
 		<div class="destination-packages">
 			<div class="container">
 				<div class="row mb-4">
-					<div class="col-md-9 offset-md-1">
+					<div class="col-md-12">
 						<h1>Pacotes para <?php single_cat_title(); ?></h1>
 						<?php echo category_description(); ?>
 						<p class="posts-count">
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-10 offset-md-1">
+					<div class="col-md-12">
 						<div class="destination-packages__list">
 							<?php 
 								$args = array(
