@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php wp_title('Blog | termo buscado:'); ?> - <?php bloginfo('name'); ?></title>
+		<title><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/images/icons/favicon.ico" rel="shortcut icon">
@@ -26,7 +26,6 @@
       <div class="row mb-4">
         <div class="col-md-12">
 					<h1>Confira todos os pacotes que temos disponíveis</h1>
-					<p>Lorem ipsum sit dolor emet</p>
 				</div>
 			</div>
 			<div class="row">
@@ -44,16 +43,16 @@
 							<?php
 									
 								$args = array(
-									'post_type'	  => 'travel_package',
+									'post_type' => 'travel_package',
 									'post_status' => 'publish',
 									'nopaging' => true,
 									'orderby' => 'meta_value_num',
 									'order' => 'DESC',
 									'tax_query' => array(
 										array(
-											'taxonomy'  => 'destino',
-											'terms'     => array( $category->slug ),
-											'field'     => 'slug'
+											'taxonomy' => 'destino',
+											'terms' => array( $category->slug ),
+											'field' => 'slug'
 										)
 									)
 								);
@@ -90,18 +89,15 @@
 							<?php } ?>					
 						</div>
 						<?php
-								// Reset things, for good measure
-								$query = null;
-								wp_reset_postdata();
-						// end the loop
+							// Reset things, for good measure
+							$query = null;
+							wp_reset_postdata();
+							// end the loop
 						endforeach;
 						?>
-
 					</div>
-
 				</div>
 			</div>
 		</div>
 	</section>
-
 <?php get_footer(); ?>

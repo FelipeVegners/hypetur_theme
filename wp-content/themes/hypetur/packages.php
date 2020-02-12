@@ -1,8 +1,8 @@
 <div id="packages" class="promo-package" style="position:relative;">
   <?php
     $args = array(
-    'post_type'	  => 'travel_package',
-    'meta_key'    => 'is_promo_package',
+    'post_type' => 'travel_package',
+    'meta_key' => 'is_promo_package',
     'post_status' => 'publish',
     'nopaging' => true,
     'orderby' => 'meta_value_num',

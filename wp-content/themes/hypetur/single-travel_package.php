@@ -5,23 +5,13 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/images/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/images/icons/touch.png" rel="apple-touch-icon-precomposed">
+		<link href="<?php echo get_template_directory_uri(); ?>/images/icons/favicon.ico" rel="shortcut icon">
+		<link href="<?php echo get_template_directory_uri(); ?>/images/icons/touch.png" rel="apple-touch-icon-precomposed">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
-
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -30,94 +20,47 @@
 		<div class="container-fluid blog__topbar">
 			<a href="../" class="back-home">Ver todos os roteiros</a>
 		</div>
-		<div class="container">
+	</section>
+
+	<section class="single-package" style="background:url(<?php echo get_post_meta(get_the_ID(), 'picture_url', true) ?>) top center/cover no-repeat; height: 400px; position:relative;">
+	</section>
+
+		<div class="container" style="background-color: #5b4e5c; position: relative; top: -80px;">
+			<div class="px-4" style="background-color: #fec578; position: relative; top: -40px; float: right; width: auto; height: 100%;">
+				<small>Compartilhe:</small>
+				<?php function getBitly($url) { $bitly = file_get_contents("http://api.bit.ly/v3/shorten?login=marketingrd&apiKey=R_7d8776cf13bd45b0bf4fa9376b1212c4&longUrl=$url%2F&format=txt"); return $bitly; } ?>
+				<ul class="blog__social__list">
+					<li class="facebook">
+						<a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank">
+						<i class="fab fa-facebook"></i>
+						</a>
+					</li>
+					<li class="twitter">
+						<a href="https://twitter.com/intent/tweet?url=<?php $bitly = getBitly(get_permalink($post->ID)); echo $bitly ?>&text=<?php echo single_post_title(); ?>&via=resdigitais" target="_blank">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li class="google">
+						<a href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank">
+							<i class="fab fa-google-plus"></i>							
+						</a>
+					</li>
+					<li class="linkedin hidden-md">
+						<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>&title=<?php echo single_post_title(); ?>&source=<?php bloginfo('url'); ?>" target="_blank">
+							<i class="fab fa-linkedin"></i>							
+						</a>
+					</li>
+					<li class="whatsapp hidden-sm hidden-md hidden-lg">
+						<a href="whatsapp://send?text=<?php echo get_permalink(); ?>" data-action="share/whatsapp/share" target="_blank">
+							<i class="fab fa-whatsapp"></i>								
+						</a></li>
+				</ul>
+			</div>
 			<div class="row">
-				<?php
-					if (have_posts()) :
-					while (have_posts()) : the_post();
-				?>
-				<article class="col-md-8">
-					<!-- post thumbnail -->
-					<?php if ( has_post_thumbnail()) : ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<div class="">
-							<?php the_post_thumbnail(); ?>
-						</div>
-					</a>
-					<?php endif; ?>
-					<!-- /post thumbnail -->
-					<header>
-						<?php the_title('<h1 class="mb-4" itemprop="headline">','</h1>'); ?>
-						<?php if (has_excerpt()) {?>
-							<p class="mb-4" itemprop="description"><?php echo get_the_excerpt(); ?></p>
-						<?php } ?>
-						<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php echo get_permalink(); ?>"/>
-						<meta itemprop="datePublished" content="<?php the_time('Y-n-j'); ?>"/>
-						<meta itemprop="dateModified" content="<?php the_modified_date('Y-n-j'); ?>"/>
-						<span class="hidden" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-							<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-								<meta itemprop="url" content="<?php echo get_template_directory_uri(); ?>/images/brand/normal-brand.svg">
-								<meta itemprop="width" content="1000">
-								<meta itemprop="height" content="130">
-							</span>
-							<meta itemprop="name" content="HypeTur Viagens e Turismo">
-						</span>
-						<span class="hidden" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-							<meta itemprop="url" content="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>">
-							<meta itemprop="width" content="<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); echo $img[1] ?>">
-							<meta itemprop="height" content="<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); echo $img[2] ?>">
-						</span>
-					</header>
-					<div class="row">
-						<main class="col-md-12 post" itemprop="articleBody">							
-							<?php the_content(); ?>
-						</main>
-						<aside class="col-md-3 hidden-sm hidden-xs" role="complementary">
-							<?php if ( is_active_sidebar( 'posts-sidebar' ) ) : ?>
-								<?php dynamic_sidebar( 'posts-sidebar' ); ?>
-							<?php endif; ?>
-						</aside>
-					</div>
-					<footer class="row">
-					</footer>
-				</article>
-				<div class="col-md-2 blog__post__about" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					<div class="blog__social__share">
-						<small>Compartilhe:</small>
-						<?php function getBitly($url) { $bitly = file_get_contents("http://api.bit.ly/v3/shorten?login=marketingrd&apiKey=R_7d8776cf13bd45b0bf4fa9376b1212c4&longUrl=$url%2F&format=txt"); return $bitly; } ?>
-						<ul class="blog__social__list">
-							<li class="facebook">
-								<a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank">
-								<i class="fab fa-facebook"></i>
-								</a>
-							</li>
-							<li class="twitter">
-								<a href="https://twitter.com/intent/tweet?url=<?php $bitly = getBitly(get_permalink($post->ID)); echo $bitly ?>&text=<?php echo single_post_title(); ?>&via=resdigitais" target="_blank">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li class="google">
-								<a href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank">
-									<i class="fab fa-google-plus"></i>							
-								</a>
-							</li>
-							<li class="linkedin hidden-md">
-								<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>&title=<?php echo single_post_title(); ?>&source=<?php bloginfo('url'); ?>" target="_blank">
-									<i class="fab fa-linkedin"></i>							
-								</a>
-							</li>
-							<li class="whatsapp hidden-sm hidden-md hidden-lg">
-								<a href="whatsapp://send?text=<?php echo get_permalink(); ?>" data-action="share/whatsapp/share" target="_blank">
-									<i class="fab fa-whatsapp"></i>								
-								</a></li>
-						</ul>
-					</div>
+				<div class="col-md-10 p-4" style="color:white">
+					<h1 class="mb-2" style="color:#fec578;"><?php echo get_post_meta(get_the_ID(), 'package_title', true)?></h1>
+					<p style="color:white;"><?php echo get_post_meta(get_the_ID(), 'package_description', true)?></p>
 				</div>
-				<?php
-					endwhile;
-					endif;
-				?>											
 			</div>
 		</div>
-	</section>
 <?php get_footer(); ?>

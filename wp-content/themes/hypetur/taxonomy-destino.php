@@ -29,10 +29,10 @@
 					<div class="col-md-12">
 						<h1>Pacotes para <?php single_cat_title(); ?></h1>
 						<?php echo category_description(); ?>
-						<p class="posts-count">
+						<p class="mt-3 posts-count">
 							Nós temos 
-							<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> destino disponível,
-							<?php } else { echo $wp_query->found_posts ?> destinos disponíveis, <?php } ?>
+							<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> pacote disponível,
+							<?php } else { echo $wp_query->found_posts ?> pacotes disponíveis, <?php } ?>
 							confira:
 						</p>
 					</div>
@@ -42,7 +42,7 @@
 						<div class="destination-packages__list">
 							<?php 
 								$args = array(
-									'post_type'	  => 'travel_package',
+									'post_type' => 'travel_package',
 									'post_status' => 'publish',
 									'nopaging' => true,
 									'orderby' => 'meta_value_num',
@@ -82,7 +82,7 @@
 											<small>Saldo em:</small>
 											<h3><?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h3>
 										</div>
-										<a class="view-the-package" href="<?php the_permalink(); ?>" >Ver mais</a>
+										<a class="view-the-package" href="<?php echo $package->post_name ?>" >Ver mais</a>
 									</div>
 								</div>
 							<?php } ?>
