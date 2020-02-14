@@ -1,0 +1,55 @@
+
+.single-package {
+  &__topbar {
+    & .blog__topbar {
+      margin-bottom: 0;
+    }
+  }
+
+  &__package-image {
+    position:relative;
+    display: flex;
+    align-items: flex-end;
+    height: 680px;
+
+    @media screen and (min-width: 425px) {
+      height: 90vh;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 2rem 1.5rem;
+    background-color: $main-color;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 3rem;
+    background: $second-light-color url('images/world-map.png') center center /cover no-repeat;
+  }
+
+  &__intro {
+    position: relative; 
+    top: -80px;
+    background-color: $main-color; 
+  }
+
+  &__social-share {
+    position: relative;
+    top: -40px;
+    float: right;
+    padding: 1rem;
+    height: 100%;
+    background-color:$second-color;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $second-color;
+  }
+
+  &__intro-text p {
+    color: $white !important;
+  }
+}

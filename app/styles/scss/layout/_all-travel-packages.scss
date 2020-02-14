@@ -8,6 +8,11 @@
     border-bottom: 1px solid rgba($main-color, .2);
   }
 
+  &__link,
+  &__link:hover {
+    color: $main-color;
+  }
+
   .card {
     width: 100%;
 

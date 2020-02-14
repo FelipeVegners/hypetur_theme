@@ -20,16 +20,16 @@
 	
 	<section class="blog">
 		<div class="container-fluid blog__topbar">
-			<a href="../" class="back-home">Voltar</a>
+			<a href="../" class="back-home">Ver todos os pacotes</a>
 		</div>
 
 		<div class="destination-packages">
 			<div class="container">
 				<div class="row mb-4">
-					<div class="col-md-12">
-						<h1>Pacotes para <?php single_cat_title(); ?></h1>
+					<div class="col-12">
+						<h1 class="mb-2">Pacotes para <?php single_cat_title(); ?></h1>
 						<?php echo category_description(); ?>
-						<p class="mt-3 posts-count">
+						<p class="mt-3 mb-2 posts-count">
 							Nós temos 
 							<?php if ( $wp_query->found_posts == 1){ echo $wp_query->found_posts ?> pacote disponível,
 							<?php } else { echo $wp_query->found_posts ?> pacotes disponíveis, <?php } ?>

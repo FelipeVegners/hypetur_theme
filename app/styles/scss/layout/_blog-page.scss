@@ -30,7 +30,7 @@
         content: '';
         position: absolute;
         top: 3px;
-        left: -10px;
+        left: -15px;
         width: 10px;
         height: 10px;
         border-width: 1px;
@@ -142,12 +142,17 @@
   &__social {
 
     &__list {
-      display: flex;
-      list-style-type: none;
       padding: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
 
       & li {
         margin-right: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       & li > a > i {

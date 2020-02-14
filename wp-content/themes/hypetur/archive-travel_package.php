@@ -20,16 +20,17 @@
 
 	<section class="blog">
 		<div class="container-fluid blog__topbar">
-			<a href="../" class="back-home">Voltar para o site</a>
+			<a href="../" class="back-home">Voltar para a home</a>
 		</div>
 		<div class="container">
       <div class="row mb-4">
-        <div class="col-md-12">
-					<h1>Confira todos os pacotes que temos disponíveis</h1>
+        <div class="col-10 offset-1">
+					<h1>Pacotes de Viagem Hype Tur</h1>
+					<p>Selecionamos sempre os melhores roteiros para você viajar com os melhores preços do mercado.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-10 offset-1">
 					<div class="all-travel-packages">
 						<?php 
 							// Get all the categories
@@ -37,8 +38,12 @@
 							// Loop through all the returned terms
 							foreach ( $categories as $category ):
 						?>
-						<h2><?php echo $category->name; ?></h2>
-						<p class="mb-3"><?php echo $category->description;?></p>
+						<h2 class="mb-2">
+							<a class="all-travel-packages__link" href="<?php echo ($category->slug.'/'.$package->post_name);?>" >
+								<?php echo $category->name; ?>
+							</a>
+						</h2>
+						<p class="mb-4"><?php echo $category->description;?></p>
 						<div class="travel-package-list">
 							<?php
 									
