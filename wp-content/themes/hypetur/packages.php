@@ -3,6 +3,7 @@
     $args = array(
     'post_type' => 'travel_package',
     'meta_key' => 'is_promo_package',
+    'meta_value' => '1',
     'post_status' => 'publish',
     'nopaging' => true,
     'orderby' => 'meta_value_num',
