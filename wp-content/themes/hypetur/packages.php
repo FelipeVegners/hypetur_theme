@@ -65,6 +65,7 @@
             <div class="row">
               <div class="col-md-12 text-center text-md-left">
                 <h2 class="mb-3">Valor do Pacote:</h2>
+                <small>a partir de:</small>
                 <h3 class="mb-0">Entrada:</h3>
                 <h2 class="mb-3">R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>
                 <h3 class="mb-0">Saldo em:</h3>
