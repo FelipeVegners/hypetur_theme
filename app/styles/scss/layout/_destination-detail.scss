@@ -124,10 +124,3 @@
         background-color: $second-color;
     }
 }
-
-.package-includes {
-    justify-content: center;
-    @media screen and (max-width: 425px) {
-        flex-wrap: nowrap;
-    }
-}

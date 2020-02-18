@@ -26,7 +26,7 @@
     <div class="container-fluid single-package__header">
       <div class="container">
         <div class="single-package__social-share">
-          <small>Compartilhe:</small>
+          <small>Compartilhe</small>
           <?php function getBitly($url) { $bitly = file_get_contents("http://api.bit.ly/v3/shorten?login=marketingrd&apiKey=R_7d8776cf13bd45b0bf4fa9376b1212c4&longUrl=$url%2F&format=txt"); return $bitly; } ?>
           <ul class="blog__social__list">
             <li class="facebook">
@@ -73,7 +73,7 @@
         </div>
         <div class="row destination-price">
           <div class="col-md-6">
-            <div class="row package-includes">
+            <div class="row mb-3 package-includes">
               <?php 
                 $includes = get_post_meta(get_the_ID(), 'package_includes', false);
                 foreach ( $includes as $include ) {
@@ -97,17 +97,14 @@
           <div class="col-md-5 inset-md-1 package-price">
             <div class="row">
               <div class="col-md-12 text-center text-md-left">
-                <h2 class="mb-3">Valor do Pacote:</h2>
-                <small>a partir de:</small>
-                <h3 class="mb-0">Entrada:</h3>
-                <h2 class="mb-3">R$ <?php echo get_post_meta(get_the_ID(), 'package_initial_ammount', true) ?></h2>
-                <h3 class="mb-0">Saldo em:</h3>
-                <h2>
-                  <?php echo get_post_meta(get_the_ID(), 'package_payment_parcels', true) ?>
-                  x de: R$ <?php echo get_post_meta(get_the_ID(), 'package_parcel_ammount', true) ?>
-                </h2>
-                <small><?php echo get_post_meta(get_the_ID(), 'package_price_disclaimer', true) ?></small>
-                <a href="https://api.whatsapp.com/send?l=pt_br&phone=5511953845396&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote:%20<?php echo $package_meta['package_title'][0] ?>" target="blank" class="buy-package">Fazer reserva</a>
+                <h2 class="mb-3">Valor do Pacote</h2>
+                <small><strong>a partir de:</strong></small>
+                <h3 class="mb-0">Entrada de R$ <?php echo get_post_meta(get_the_ID(), 'package_initial_ammount', true) ?></h3>
+                <h3 class="mb-3">Saldo em <?php echo get_post_meta(get_the_ID(), 'package_payment_parcels', true) ?>
+                  x de R$ <?php echo get_post_meta(get_the_ID(), 'package_parcel_ammount', true) ?>
+                </h3>
+                <small class="package-price__disclaimer"><?php echo get_post_meta(get_the_ID(), 'package_price_disclaimer', true) ?></small>
+                <a href="https://api.whatsapp.com/send?l=pt_br&phone=5511953845396&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote:%20<?php echo get_post_meta(get_the_ID(), 'package_title', true) ?>" target="blank" class="buy-package">Fazer reserva</a>
               </div>
             </div>
           </div>

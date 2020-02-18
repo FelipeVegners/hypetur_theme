@@ -34,13 +34,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1><?php echo $package_meta['package_title'][0] ?></h1>
+            <h1 class="mb-3"><?php echo $package_meta['package_title'][0] ?></h1>
             <p><?php echo $package_meta['package_description'][0] ?></p>
           </div>
         </div>
         <div class="row destination-price">
           <div class="col-md-6">
-            <div class="row package-includes">
+            <div class="row mb-3 package-includes">
               <?php 
                 $includes = $package_meta['package_includes'];
                 foreach ( $includes as $include ) {
@@ -65,12 +65,10 @@
             <div class="row">
               <div class="col-md-12 text-center text-md-left">
                 <h2 class="mb-3">Valor do Pacote:</h2>
-                <small>a partir de:</small>
-                <h3 class="mb-0">Entrada:</h3>
-                <h2 class="mb-3">R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>
-                <h3 class="mb-0">Saldo em:</h3>
-                <h2><?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h2>
-                <small><?php echo $package_meta['package_price_disclaimer'][0] ?></small>
+                <small><strong>a partir de:</strong></small>
+                <h3 class="mb-0">Entrada: R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h3>
+                <h3 class="mb-3">Saldo em: <?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h3>
+                <small class="package-price__disclaimer"><?php echo $package_meta['package_price_disclaimer'][0] ?></small>
                 <a href="https://api.whatsapp.com/send?l=pt_br&phone=5511953845396&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20pacote:%20<?php echo $package_meta['package_title'][0] ?>" target="blank" class="buy-package">Fazer reserva</a>
               </div>
             </div>

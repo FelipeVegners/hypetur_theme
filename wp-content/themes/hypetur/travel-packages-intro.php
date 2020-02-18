@@ -21,11 +21,11 @@
               <div class="card-body d-flex flex-column justify-content-between">
                 <div class="mb-4">
                   <h5 class="mb-2 ">
-                    <a class="blog__post__title" href="/pacotes-de-viagem/<?php echo $term->slug ?>" title="<?php echo $term->name?>"><?php echo $term->name; ?></a>
+                    <a class="blog__post__title" href="./pacotes-de-viagem/<?php echo $term->slug ?>" title="<?php echo $term->name?>"><?php echo $term->name; ?></a>
                   </h5>
                   <p class="card-text"><?php echo $term->description; ?></p>
                 </div>
-                <a href="/pacotes-de-viagem/<?php echo $term->slug ?>" class="view-all-packages">Ver os pacotes</a>
+                <a href="./pacotes-de-viagem/<?php echo $term->slug ?>" class="view-all-packages">Ver os pacotes</a>
               </div>
             </div>
             <?php 
