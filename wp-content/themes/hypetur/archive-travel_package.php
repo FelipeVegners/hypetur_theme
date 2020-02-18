@@ -81,12 +81,10 @@
 										</div>
 										<br>
 										<div>
-											<small class="mb-2">A partir de:</small>
+											<small class="mb-2">a partir de:</small>
 											<br>
-											<small>Entrada:</small>
-											<h3 class="mb-0">R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h2>
-											<small>Saldo em:</small>
-											<h3><?php echo $package_meta['package_payment_parcels'][0] ?>x de: R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h3>
+											<h3 class="mb-0 d-inline-block">Entrada de R$ <?php echo $package_meta['package_initial_ammount'][0] ?></h3>
+											<h3 class="d-inline-block">Saldo em <?php echo $package_meta['package_payment_parcels'][0] ?>x de R$ <?php echo $package_meta['package_parcel_ammount'][0] ?></h3>
 										</div>
 										<a class="view-the-package" href="<?php echo ($category->slug.'/'.$package->post_name);?>" >Ver mais</a>
 									</div>
