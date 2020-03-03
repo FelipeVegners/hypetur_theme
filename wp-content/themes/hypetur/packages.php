@@ -79,17 +79,17 @@
             <div class="package-more-info">
               <ul class="nav nav-tabs" id="package-more-details" role="tablist">
                 <li class="nav-item">
-                  <a class="more-info-tab active" id="includes" data-toggle="tab" href="#includes-<?php echo $package_meta['country'][0] ?>" role="tab" aria-controls="home" aria-selected="true">Inclusões</a>
+                  <a class="more-info-tab active" id="includes" data-toggle="tab" href="#includes-<?php echo $package->ID ?>" role="tab" aria-controls="home" aria-selected="true">Inclusões</a>
                 </li>
                 <li class="nav-item">
-                  <a class="more-info-tab" id="schedule" data-toggle="tab" href="#schedule-<?php echo $package_meta['country'][0] ?>" role="tab" aria-controls="profile" aria-selected="false">Roteiro Diário</a>
+                  <a class="more-info-tab" id="schedule" data-toggle="tab" href="#schedule-<?php echo $package->ID ?>" role="tab" aria-controls="profile" aria-selected="false">Roteiro Diário</a>
                 </li>
               </ul>
               <div class="tab-content more-info-content">
-                <div class="tab-pane fade show active" id="includes-<?php echo $package_meta['country'][0] ?>" role="tabpanel" aria-labelledby="includes">
+                <div class="tab-pane fade show active" id="includes-<?php echo $package->ID ?>" role="tabpanel" aria-labelledby="includes">
                   <?php echo $package_meta['package_tab_inclusions'][0] ?>
                 </div>
-                <div class="tab-pane fade" id="schedule-<?php echo $package_meta['country'][0] ?>" role="tabpanel" aria-labelledby="schedule">
+                <div class="tab-pane fade" id="schedule-<?php echo $package->ID ?>" role="tabpanel" aria-labelledby="schedule">
                   <?php echo $package_meta['package_tab_schedule'][0] ?>
                 </div>
               </div>
