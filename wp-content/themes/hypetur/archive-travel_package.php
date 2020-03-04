@@ -16,7 +16,7 @@
 
 	</head>
 
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?>
 
 	<section class="blog">
 		<div class="container-fluid blog__topbar">
