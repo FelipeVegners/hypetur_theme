@@ -26,17 +26,39 @@
         <div class="row mt-4">
           <div class="col-md-12 company-info">
             <p class="mb-0">A.O. PACHECO VIAGENS E TURISMO - EPP</p>
-            <p class="mb-0">CNPJ 27.077.404/0001-30</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
+            <h2 class="my-4">Fale Conosco:</h2>
             <p class="my-4">
               Av. Nove de Julho, 3575 - Sala 1711
               <br>
               Anhangabaú - Jundiaí / SP
               <br>
               CEP 13208-056
+            </p>
+            <p class="mb-0"><strong>E-mail:</strong> contato@hypetur.com.br</p>
+            <p class="mb-0"><strong>Telefone:</strong> 11 4587-3971</p>
+            <p class="mb-0">
+              <strong>WhatsApp:</strong>
+              <a 
+                style="
+                  display:inline-block;
+                  margin:0;
+                  padding:0;
+                  height:auto;
+                  background:none;
+                  color:#fff;
+                  font-style:normal;
+                  font-weight:300;
+                  transition:none;
+                  line-height:1"
+                href="https://wa.me/5511953845396?text=Olá,%20preciso%20de%20mais%20informações%20sobre"
+                target="_blank"
+              >
+                11 95384-5396
+              </a>
             </p>
           </div>
         </div>
