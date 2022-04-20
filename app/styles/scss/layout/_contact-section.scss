@@ -12,8 +12,7 @@
   label {
     margin: 0;
   }
-
-  a,
+  
   input[type=submit] {
     display: inherit;
     margin: 2rem 0;
@@ -69,10 +68,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 !important;
+
+    & h3 {
+      color: $white !important;
+    }
 
     & p {
+      display: inline;
       font-size: 0.85rem !important;
-      color: $second-color !important;
+      color: $white !important;
+    }
+
+    & .whatsapp-link {
+      display: inline;
+
+      & > a {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background-image: url('images/icons/wpp-icon.svg');
+          top: -7px;
+          left: 110%;
+          width: 24px;
+          height: 24px;
+          z-index: 9999;
+        }
+      }
     }
   }
 }

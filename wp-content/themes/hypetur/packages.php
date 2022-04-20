@@ -15,7 +15,7 @@
     $package_meta = get_post_meta($package->ID, '', true);
   ?>
   <div class="promo-package-wrapper">
-    <section class="destination-section" style="background:url(<?php echo $package_meta['picture_url'][0] ?>) top center/cover no-repeat;">
+    <section class="destination-section" style="background:url(<?php echo $package_meta['picture_url'][0] ?>) center center/cover no-repeat;">
       <div class="destination-detail">
         <h1><?php echo $package_meta['place'][0] ?></h1>
         <small><?php echo $package_meta['country'][0] ?></small>
